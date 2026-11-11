@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+User-agent: Yandex
+Allow: /
+# Склеивание URL с рекламными метками (чтобы Яндекс не индексировал дубли)
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&yclid&gclid&fbclid&_openstat /
+# Host Яндекс больше не учитывает (главное зеркало задаётся в Вебмастере и 301-редиректом); оставлено для совместимости
+Host: https://dieselcars.by
+
+Sitemap: https://dieselcars.by/sitemap.xml

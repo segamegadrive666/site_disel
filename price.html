@@ -1,497 +1,363 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" prefix="og: https://ogp.me/ns#">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Прайс-лист — ООО «Дизель Карс»</title>
-<meta name="description" content="Официальный прайс-лист ООО «Дизель Карс»: диагностика, ремонт ТНВД, форсунок Common Rail, насос-форсунок, замена двигателя.">
-<style>
-/* ============================================================
-   СТРАНИЦА ПРАЙСА — строгое ч/б оформление (по ГОСТ Р 7.0.97-2016)
-   ============================================================ */
+<title>Прайс-лист: ремонт ТНВД и форсунок в Минске, цены BYN</title>
+<meta name="description" content="Цены на ремонт ТНВД, форсунок Common Rail и насос-форсунок в Минске: диагностика дизеля от 25 BYN, ремонт форсунки от 45 BYN. Актуальный прайс.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://dieselcars.by/price.html">
+<meta name="theme-color" content="#0d0a08">
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!-- Гео-метатеги -->
+<meta name="geo.region" content="BY-HM">
+<meta name="geo.placename" content="Минск">
+<meta name="geo.position" content="53.9167638;27.6856693">
+<meta name="ICBM" content="53.9167638, 27.6856693">
 
-html {
-  background: #e8e8e8; /* серый фон «стола» вокруг листа */
-}
+<!-- Open Graph -->
+<meta property="og:site_name" content="DieselCars">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_BY">
+<meta property="og:url" content="https://dieselcars.by/price.html">
+<meta property="og:title" content="Прайс-лист: ремонт ТНВД и форсунок в Минске, цены BYN">
+<meta property="og:description" content="Цены на ремонт ТНВД, форсунок Common Rail и насос-форсунок в Минске: диагностика дизеля от 25 BYN, ремонт форсунки от 45 BYN. Актуальный прайс.">
+<meta property="og:image" content="https://dieselcars.by/img/og-dieselcars.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ремонт ТНВД и форсунок Common Rail — DieselCars, Минск">
+<meta name="twitter:card" content="summary_large_image">
 
-body {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 14pt;
-  line-height: 1.45;
-  color: #000;
-  background: #fff;
-  max-width: 210mm;       /* A4 по ширине */
-  margin: 0 auto;
-  padding: 20mm 15mm 20mm 30mm; /* левое поле 30мм под подшивку, по ГОСТ */
-  min-height: 100vh;
-}
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-/* ===== ШАПКА ДОКУМЕНТА ===== */
-.doc-header {
-  border-bottom: 2px solid #000;
-  padding-bottom: 12px;
-  margin-bottom: 24px;
-}
+<!-- GTM / GA4 HEAD: вставьте сюда код Google Tag Manager или gtag.js (GA4) -->
+<!-- /GTM / GA4 HEAD -->
 
-.doc-org {
-  font-size: 16pt;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 4px;
-}
+<!-- YANDEX METRIKA: вставьте сюда код счётчика Яндекс Метрики (и укажите его ID в js/goals.js) -->
+<!-- /YANDEX METRIKA -->
 
-.doc-org-sub {
-  font-size: 11pt;
-  line-height: 1.4;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-.doc-org-sub span {
-  display: block;
-}
-
-.doc-meta {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px 24px;
-  font-size: 11pt;
-  margin-top: 12px;
-  padding-top: 10px;
-  border-top: 1px solid #000;
-}
-
-.doc-meta span {
-  white-space: nowrap;
-}
-
-/* ===== ЗАГОЛОВОК ===== */
-.doc-title {
-  text-align: center;
-  margin: 28px 0 8px;
-}
-
-.doc-title h1 {
-  font-size: 18pt;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  margin-bottom: 6px;
-}
-
-.doc-title .doc-subtitle {
-  font-size: 12pt;
-  font-style: italic;
-}
-
-/* ===== ВВОДНЫЙ ТЕКСТ ===== */
-.doc-intro {
-  font-size: 12pt;
-  text-align: justify;
-  margin: 20px 0;
-  padding: 12px 16px;
-  border: 1px solid #000;
-}
-
-/* ===== РАЗДЕЛЫ ===== */
-.section {
-  margin: 28px 0;
-}
-
-.section h2 {
-  font-size: 14pt;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  margin-bottom: 8px;
-  padding-bottom: 4px;
-  border-bottom: 1px solid #000;
-}
-
-/* ===== ТАБЛИЦЫ ===== */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 11.5pt;
-  margin-bottom: 8px;
-}
-
-thead th {
-  background: #000;
-  color: #fff;
-  font-weight: bold;
-  text-align: left;
-  padding: 8px 10px;
-  border: 1px solid #000;
-  font-size: 11pt;
-}
-
-thead th:first-child {
-  width: 50px;
-  text-align: center;
-}
-
-thead th:last-child {
-  text-align: right;
-  width: 130px;
-}
-
-tbody td {
-  padding: 7px 10px;
-  border: 1px solid #000;
-  vertical-align: top;
-}
-
-tbody td:first-child {
-  text-align: center;
-  width: 50px;
-}
-
-tbody td:last-child {
-  text-align: right;
-  white-space: nowrap;
-  font-weight: bold;
-}
-
-/* ===== ВАЖНЫЕ ПРИМЕЧАНИЯ ===== */
-.notice {
-  border: 2px solid #000;
-  padding: 16px 20px;
-  margin: 28px 0;
-  font-size: 12pt;
-}
-
-.notice h3 {
-  font-size: 12pt;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 10px;
-  padding-bottom: 6px;
-  border-bottom: 1px solid #000;
-}
-
-.notice ol {
-  padding-left: 22px;
-}
-
-.notice ol li {
-  margin-bottom: 8px;
-  text-align: justify;
-}
-
-.notice ol li:last-child {
-  margin-bottom: 0;
-}
-
-/* ===== ПОДПИСИ ===== */
-.signs {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  margin-top: 48px;
-  padding-top: 16px;
-  border-top: 1px solid #000;
-  font-size: 11.5pt;
-}
-
-.signs .sign {
-  flex: 1;
-}
-
-.signs .sign-line {
-  display: inline-block;
-  border-bottom: 1px solid #000;
-  min-width: 180px;
-  margin: 0 4px;
-}
-
-.signs .sign-caption {
-  font-size: 10pt;
-  color: #333;
-  margin-top: 2px;
-}
-
-/* ===== КОЛОНТИТУЛ ===== */
-.doc-footer {
-  margin-top: 36px;
-  padding-top: 12px;
-  border-top: 1px solid #000;
-  font-size: 10pt;
-  text-align: center;
-  line-height: 1.4;
-}
-
-/* ===== ПЕЧАТЬ ===== */
-@media print {
-  html { background: #fff; }
-  body { padding: 15mm 10mm 15mm 20mm; max-width: none; }
-  thead th { background: #000 !important; color: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .section { page-break-inside: avoid; }
-  .notice { page-break-inside: avoid; }
-}
-
-/* ===== МОБИЛЬНЫЙ ===== */
-@media (max-width: 640px) {
-  body {
-    font-size: 12pt;
-    padding: 16px 12px;
-    max-width: none;
-  }
-
-  .doc-org { font-size: 14pt; }
-  .doc-title h1 { font-size: 14pt; letter-spacing: 0.8px; }
-  .doc-meta { flex-direction: column; gap: 4px; font-size: 10pt; }
-  .doc-meta span { white-space: normal; }
-
-  table { font-size: 10.5pt; }
-  thead th, tbody td { padding: 6px 8px; }
-  thead th:last-child { width: 90px; }
-
-  .signs { flex-direction: column; gap: 24px; }
-}
-</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"AutoRepair","@id":"https://dieselcars.by/#business","name":"DieselCars","url":"https://dieselcars.by/","telephone":"+375296194092","address":{"@type":"PostalAddress","streetAddress":"ул. Липковская, 6","addressLocality":"Минск","postalCode":"220000","addressCountry":"BY"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Прайс-лист: ремонт и диагностика дизельных топливных систем","itemListElement":[{"@type":"OfferCatalog","name":"Диагностика дизельного двигателя и общие работы","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Диагностика систем управления двигателем"},"priceSpecification":{"@type":"PriceSpecification","minPrice":25,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Считывание ошибок блока управления"},"priceSpecification":{"@type":"PriceSpecification","minPrice":11,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Осмотр автомобиля"},"priceSpecification":{"@type":"PriceSpecification","minPrice":9,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Поиск неисправности"},"priceSpecification":{"@type":"PriceSpecification","minPrice":18,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Проверка компрессии одного цилиндра"},"priceSpecification":{"@type":"PriceSpecification","minPrice":8,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Проверка меток ГРМ"},"priceSpecification":{"@type":"PriceSpecification","minPrice":25,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Проверка УОВ"},"priceSpecification":{"@type":"PriceSpecification","minPrice":10,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Регулировка УОВ (легковой автомобиль)"},"priceSpecification":{"@type":"PriceSpecification","minPrice":37,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Регулировка УОВ (микроавтобус)"},"priceSpecification":{"@type":"PriceSpecification","minPrice":48,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Регулировка фаз ГРМ"},"priceSpecification":{"@type":"PriceSpecification","minPrice":23,"priceCurrency":"BYN"}}]},{"@type":"OfferCatalog","name":"Ремонт форсунок Common Rail","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Проверка гидроплотности топливной системы"},"priceSpecification":{"@type":"PriceSpecification","minPrice":13,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Диагностика форсунки CR Delphi"},"priceSpecification":{"@type":"PriceSpecification","minPrice":10,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Проверка форсунки CR с распечаткой"},"priceSpecification":{"@type":"PriceSpecification","minPrice":7.5,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Проверка грузовой форсунки CR"},"priceSpecification":{"@type":"PriceSpecification","minPrice":10,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Ремонт форсунки Common Rail"},"priceSpecification":{"@type":"PriceSpecification","minPrice":45,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Регулировка форсунки CR"},"priceSpecification":{"@type":"PriceSpecification","minPrice":20,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Регулировка форсунки CR Bosch"},"priceSpecification":{"@type":"PriceSpecification","minPrice":25,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Замена распылителя без ремонта форсунки CR"},"priceSpecification":{"@type":"PriceSpecification","minPrice":18,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Ремонт седла клапана (мультипликатора) CR"},"priceSpecification":{"@type":"PriceSpecification","minPrice":18,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Раскоксовка гнезда форсунки (1 цилиндр)"},"priceSpecification":{"@type":"PriceSpecification","minPrice":40,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Правка посадочного гнезда форсунки CR"},"priceSpecification":{"@type":"PriceSpecification","minPrice":15,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Снятие / установка форсунки CR, 1 цил. (легковой)"},"priceSpecification":{"@type":"PriceSpecification","minPrice":10,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Снятие / установка форсунки CR, 1 цил. (микроавтобус, внедорожник)"},"priceSpecification":{"@type":"PriceSpecification","minPrice":15,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Замена датчика системы CR Bosch, Denso"},"priceSpecification":{"@type":"PriceSpecification","minPrice":15,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Замена штуцера CR"},"priceSpecification":{"@type":"PriceSpecification","minPrice":5,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Замена уплотнений на контуре низкого давления"},"priceSpecification":{"@type":"PriceSpecification","minPrice":27,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Замена ТПУ (топливоподкачивающего устройства)"},"priceSpecification":{"@type":"PriceSpecification","minPrice":31,"priceCurrency":"BYN"}}]},{"@type":"OfferCatalog","name":"Ремонт ТНВД","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Снятие / установка ТНВД (легковой автомобиль)"},"priceSpecification":{"@type":"PriceSpecification","minPrice":110,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Снятие / установка ТНВД (микроавтобус, внедорожник)"},"priceSpecification":{"@type":"PriceSpecification","minPrice":150,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Проверка ТНВД CR"},"priceSpecification":{"@type":"PriceSpecification","minPrice":30,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Дефектовка ТНВД CR"},"priceSpecification":{"@type":"PriceSpecification","minPrice":25,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Ремонт ТНВД CR (CP3, CP1, HP3)"},"priceSpecification":{"@type":"PriceSpecification","minPrice":120,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Ремонт ТНВД CR (Delphi, Denso HP2)"},"priceSpecification":{"@type":"PriceSpecification","minPrice":150,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Замена сальника ТНВД (без разборки)"},"priceSpecification":{"@type":"PriceSpecification","minPrice":5,"priceCurrency":"BYN"}}]},{"@type":"OfferCatalog","name":"Ремонт насос-форсунок","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Снятие / установка насос-форсунки (1 цилиндр)"},"priceSpecification":{"@type":"PriceSpecification","minPrice":75,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Снятие / установка комплекта насос-форсунок (4 шт.)"},"priceSpecification":{"@type":"PriceSpecification","minPrice":125,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Снятие / установка комплекта (VW Touareg 2,5)"},"priceSpecification":{"@type":"PriceSpecification","minPrice":160,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Регулировка начала подачи топлива"},"priceSpecification":{"@type":"PriceSpecification","minPrice":38,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Замена установочного ремкомплекта (1 шт.)"},"priceSpecification":{"@type":"PriceSpecification","minPrice":2,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Правка посадочного гнезда насос-форсунки"},"priceSpecification":{"@type":"PriceSpecification","minPrice":26,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Замена регулировочных винтов с последующей регулировкой"},"priceSpecification":{"@type":"PriceSpecification","minPrice":10,"priceCurrency":"BYN"}}]},{"@type":"OfferCatalog","name":"Ультразвуковая чистка распылителей и топливной системы","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Ультразвуковая мойка деталей (один сеанс)"},"priceSpecification":{"@type":"PriceSpecification","minPrice":8,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Ультразвуковая чистка распылителей (2 шт.)"},"priceSpecification":{"@type":"PriceSpecification","minPrice":9,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Чистка регулятора давления"},"priceSpecification":{"@type":"PriceSpecification","minPrice":9.5,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Чистка топливной системы"},"priceSpecification":{"@type":"PriceSpecification","minPrice":40,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Снятие / установка и чистка клапана EGR"},"priceSpecification":{"@type":"PriceSpecification","minPrice":55,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Чистка ЭТПУ"},"priceSpecification":{"@type":"PriceSpecification","minPrice":15,"priceCurrency":"BYN"}}]},{"@type":"OfferCatalog","name":"Замена двигателя и прочие работы","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Замена двигателя целиком — с обвязкой и электрикой"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Снятие / установка клапанной крышки (Audi, VW)"},"priceSpecification":{"@type":"PriceSpecification","minPrice":13,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Снятие / установка впускного коллектора (BMW, Rover)"},"priceSpecification":{"@type":"PriceSpecification","minPrice":55,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Снятие / установка впускного коллектора (Mercedes)"},"priceSpecification":{"@type":"PriceSpecification","minPrice":30,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Снятие / установка дозировочного блока"},"priceSpecification":{"@type":"PriceSpecification","minPrice":14,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Снятие / установка тандемного насоса (Audi, VW)"},"priceSpecification":{"@type":"PriceSpecification","minPrice":40,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Замена топливного фильтра"},"priceSpecification":{"@type":"PriceSpecification","minPrice":15,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Снятие / установка топливного фильтра"},"priceSpecification":{"@type":"PriceSpecification","minPrice":11,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Снятие / установка топливного бака"},"priceSpecification":{"@type":"PriceSpecification","minPrice":72,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Снятие / установка рейла и трубопровода"},"priceSpecification":{"@type":"PriceSpecification","minPrice":21,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Замена свечи накала"},"priceSpecification":{"@type":"PriceSpecification","minPrice":18,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Проверка свечей накала одного цилиндра"},"priceSpecification":{"@type":"PriceSpecification","minPrice":3.5,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Прописка кода одного цилиндра"},"priceSpecification":{"@type":"PriceSpecification","minPrice":5,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Замена датчика коленчатого вала"},"priceSpecification":{"@type":"PriceSpecification","minPrice":33,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Замена датчика распределительного вала"},"priceSpecification":{"@type":"PriceSpecification","minPrice":11,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Замена датчика массового расхода воздуха"},"priceSpecification":{"@type":"PriceSpecification","minPrice":11,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Снятие / установка / замена ЭТПУ"},"priceSpecification":{"@type":"PriceSpecification","minPrice":54,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Запуск автомобиля (запустить двигатель)"},"priceSpecification":{"@type":"PriceSpecification","minPrice":10,"priceCurrency":"BYN"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Слесарные работы"},"priceSpecification":{"@type":"PriceSpecification","minPrice":32,"priceCurrency":"BYN"}}]}]}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://dieselcars.by/"},{"@type":"ListItem","position":2,"name":"Прайс-лист","item":"https://dieselcars.by/price.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Почему в прайс-листе цены указаны «от»?","acceptedAnswer":{"@type":"Answer","text":"Стоимость зависит от модели автомобиля, объёма работ и найденных дефектов. Окончательную цену называем после диагностики и согласования дефектной ведомости, до начала работ."}},{"@type":"Question","name":"Сколько стоит диагностика дизеля в Минске?","acceptedAnswer":{"@type":"Answer","text":"Диагностика систем управления двигателем — от 25 BYN, считывание ошибок блока управления — от 11 BYN, поиск неисправности — от 18 BYN."}},{"@type":"Question","name":"Сколько стоит ремонт форсунки Common Rail и ТНВД?","acceptedAnswer":{"@type":"Answer","text":"Ремонт форсунки Common Rail — от 45 BYN. Ремонт ТНВД CR (CP3, CP1, HP3) — от 120 BYN, ТНВД Delphi и Denso HP2 — от 150 BYN. Итоговая сумма зависит от результатов дефектовки."}},{"@type":"Question","name":"Как узнать окончательную стоимость до начала ремонта?","acceptedAnswer":{"@type":"Answer","text":"После диагностики мы сообщаем фактическую стоимость и согласуем её с вами. Работы, не согласованные по стоимости, не выполняются."}}]}]}
+</script>
 </head>
 <body>
+<!-- GTM NOSCRIPT (BODY): вставьте сюда <noscript>-iframe от Google Tag Manager -->
 
-<!-- ===== ШАПКА ДОКУМЕНТА ===== -->
-<div class="doc-header">
+<canvas id="hexbg" aria-hidden="true"></canvas>
 
-  <div class="doc-org">ООО «Дизель Карс»</div>
-
-  <div class="doc-org-sub">
-    <span>УНП 191234567</span>
-    <span>220000, Республика Беларусь, г. Минск, ул. Липковская, 6</span>
-    <span>Тел.: +375 (29) 619-40-92 · E-mail: info@dieselcars.by</span>
-  </div>
-
-  <div class="doc-meta">
-    <span>Исх. № ____ от «____» __________ 20___ г.</span>
-    <span>Действует с: «____» __________ 20___ г.</span>
-  </div>
-
-</div>
-
-<!-- ===== ЗАГОЛОВОК ===== -->
-<div class="doc-title">
-  <h1>Прайс-лист</h1>
-  <div class="doc-subtitle">на услуги по ремонту и диагностике дизельных топливных систем</div>
-</div>
-
-<!-- ===== ВВОДНЫЙ ТЕКСТ ===== -->
-<div class="doc-intro">
-  Настоящий прайс-лист устанавливает ориентировочную стоимость работ по техническому
-  обслуживанию и ремонту дизельных топливных систем, выполняемых ООО «Дизель Карс».
-  Окончательная стоимость определяется после проведения диагностики и составления
-  дефектной ведомости.
-</div>
-
-<!-- ===== РАЗДЕЛ 1 ===== -->
-<section class="section">
-  <h2>1. Диагностика и общие работы</h2>
-  <table>
-    <thead>
-      <tr><th>№</th><th>Наименование работ</th><th>Цена, BYN</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>1.1</td><td>Диагностика систем управления двигателем</td><td>от 25,00</td></tr>
-      <tr><td>1.2</td><td>Считывание ошибок блока управления</td><td>от 11,00</td></tr>
-      <tr><td>1.3</td><td>Осмотр автомобиля</td><td>от 9,00</td></tr>
-      <tr><td>1.4</td><td>Поиск неисправности</td><td>от 18,00</td></tr>
-      <tr><td>1.5</td><td>Проверка компрессии одного цилиндра</td><td>от 8,00</td></tr>
-      <tr><td>1.6</td><td>Проверка меток ГРМ</td><td>от 25,00</td></tr>
-      <tr><td>1.7</td><td>Проверка УОВ</td><td>от 10,00</td></tr>
-      <tr><td>1.8</td><td>Регулировка УОВ (легковой автомобиль)</td><td>от 37,00</td></tr>
-      <tr><td>1.9</td><td>Регулировка УОВ (микроавтобус)</td><td>от 48,00</td></tr>
-      <tr><td>1.10</td><td>Регулировка фаз ГРМ</td><td>от 23,00</td></tr>
-    </tbody>
-  </table>
-</section>
-
-<!-- ===== РАЗДЕЛ 2 ===== -->
-<section class="section">
-  <h2>2. Ремонт форсунок Common Rail</h2>
-  <table>
-    <thead>
-      <tr><th>№</th><th>Наименование работ</th><th>Цена, BYN</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>2.1</td><td>Проверка гидроплотности топливной системы</td><td>от 13,00</td></tr>
-      <tr><td>2.2</td><td>Диагностика форсунки CR Delphi</td><td>от 10,00</td></tr>
-      <tr><td>2.3</td><td>Проверка форсунки CR с распечаткой</td><td>от 7,50</td></tr>
-      <tr><td>2.4</td><td>Проверка грузовой форсунки CR</td><td>от 10,00</td></tr>
-      <tr><td>2.5</td><td>Ремонт форсунки Common Rail</td><td>от 45,00</td></tr>
-      <tr><td>2.6</td><td>Регулировка форсунки CR</td><td>от 20,00</td></tr>
-      <tr><td>2.7</td><td>Регулировка форсунки CR Bosch</td><td>от 25,00</td></tr>
-      <tr><td>2.8</td><td>Замена распылителя без ремонта форсунки CR</td><td>от 18,00</td></tr>
-      <tr><td>2.9</td><td>Ремонт седла клапана (мультипликатора) CR</td><td>от 18,00</td></tr>
-      <tr><td>2.10</td><td>Раскоксовка гнезда форсунки (1 цилиндр)</td><td>от 40,00</td></tr>
-      <tr><td>2.11</td><td>Правка посадочного гнезда форсунки CR</td><td>от 15,00</td></tr>
-      <tr><td>2.12</td><td>Снятие / установка форсунки CR, 1 цил. (легковой)</td><td>от 10,00</td></tr>
-      <tr><td>2.13</td><td>Снятие / установка форсунки CR, 1 цил. (микроавтобус, внедорожник)</td><td>от 15,00</td></tr>
-      <tr><td>2.14</td><td>Замена датчика системы CR Bosch, Denso</td><td>от 15,00</td></tr>
-      <tr><td>2.15</td><td>Замена штуцера CR</td><td>от 5,00</td></tr>
-      <tr><td>2.16</td><td>Замена уплотнений на контуре низкого давления</td><td>от 27,00</td></tr>
-      <tr><td>2.17</td><td>Замена ТПУ (топливоподкачивающего устройства)</td><td>от 31,00</td></tr>
-    </tbody>
-  </table>
-</section>
-
-<!-- ===== РАЗДЕЛ 3 ===== -->
-<section class="section">
-  <h2>3. Ремонт ТНВД</h2>
-  <table>
-    <thead>
-      <tr><th>№</th><th>Наименование работ</th><th>Цена, BYN</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>3.1</td><td>Снятие / установка ТНВД (легковой автомобиль)</td><td>от 110,00</td></tr>
-      <tr><td>3.2</td><td>Снятие / установка ТНВД (микроавтобус, внедорожник)</td><td>от 150,00</td></tr>
-      <tr><td>3.3</td><td>Проверка ТНВД CR</td><td>от 30,00</td></tr>
-      <tr><td>3.4</td><td>Дефектовка ТНВД CR</td><td>от 25,00</td></tr>
-      <tr><td>3.5</td><td>Ремонт ТНВД CR (CP3, CP1, HP3)</td><td>от 120,00</td></tr>
-      <tr><td>3.6</td><td>Ремонт ТНВД CR (Delphi, Denso HP2)</td><td>от 150,00</td></tr>
-      <tr><td>3.7</td><td>Замена сальника ТНВД (без разборки)</td><td>от 5,00</td></tr>
-    </tbody>
-  </table>
-</section>
-
-<!-- ===== РАЗДЕЛ 4 ===== -->
-<section class="section">
-  <h2>4. Ремонт насос-форсунок</h2>
-  <table>
-    <thead>
-      <tr><th>№</th><th>Наименование работ</th><th>Цена, BYN</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>4.1</td><td>Снятие / установка насос-форсунки (1 цилиндр)</td><td>от 75,00</td></tr>
-      <tr><td>4.2</td><td>Снятие / установка комплекта насос-форсунок (4 шт.)</td><td>от 125,00</td></tr>
-      <tr><td>4.3</td><td>Снятие / установка комплекта (VW Touareg 2,5)</td><td>от 160,00</td></tr>
-      <tr><td>4.4</td><td>Регулировка начала подачи топлива</td><td>от 38,00</td></tr>
-      <tr><td>4.5</td><td>Замена установочного ремкомплекта (1 шт.)</td><td>от 2,00</td></tr>
-      <tr><td>4.6</td><td>Правка посадочного гнезда насос-форсунки</td><td>от 26,00</td></tr>
-      <tr><td>4.7</td><td>Замена регулировочных винтов с последующей регулировкой</td><td>от 10,00</td></tr>
-    </tbody>
-  </table>
-</section>
-
-<!-- ===== РАЗДЕЛ 5 ===== -->
-<section class="section">
-  <h2>5. Ультразвуковая чистка</h2>
-  <table>
-    <thead>
-      <tr><th>№</th><th>Наименование работ</th><th>Цена, BYN</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>5.1</td><td>Ультразвуковая мойка деталей (один сеанс)</td><td>от 8,00</td></tr>
-      <tr><td>5.2</td><td>Ультразвуковая чистка распылителей (2 шт.)</td><td>от 9,00</td></tr>
-      <tr><td>5.3</td><td>Чистка регулятора давления</td><td>от 9,50</td></tr>
-      <tr><td>5.4</td><td>Чистка топливной системы</td><td>от 40,00</td></tr>
-      <tr><td>5.5</td><td>Снятие / установка и чистка клапана EGR</td><td>от 55,00</td></tr>
-      <tr><td>5.6</td><td>Чистка ЭТПУ</td><td>от 15,00</td></tr>
-    </tbody>
-  </table>
-</section>
-
-<!-- ===== РАЗДЕЛ 6 ===== -->
-<section class="section">
-  <h2>6. Замена двигателя и прочие работы</h2>
-  <table>
-    <thead>
-      <tr><th>№</th><th>Наименование работ</th><th>Цена, BYN</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>6.1</td><td>Замена двигателя целиком — с обвязкой и электрикой</td><td>по запросу</td></tr>
-      <tr><td>6.2</td><td>Снятие / установка клапанной крышки (Audi, VW)</td><td>от 13,00</td></tr>
-      <tr><td>6.3</td><td>Снятие / установка впускного коллектора (BMW, Rover)</td><td>от 55,00</td></tr>
-      <tr><td>6.4</td><td>Снятие / установка впускного коллектора (Mercedes)</td><td>от 30,00</td></tr>
-      <tr><td>6.5</td><td>Снятие / установка дозировочного блока</td><td>от 14,00</td></tr>
-      <tr><td>6.6</td><td>Снятие / установка тандемного насоса (Audi, VW)</td><td>от 40,00</td></tr>
-      <tr><td>6.7</td><td>Замена топливного фильтра</td><td>от 15,00</td></tr>
-      <tr><td>6.8</td><td>Снятие / установка топливного фильтра</td><td>от 11,00</td></tr>
-      <tr><td>6.9</td><td>Снятие / установка топливного бака</td><td>от 72,00</td></tr>
-      <tr><td>6.10</td><td>Снятие / установка рейла и трубопровода</td><td>от 21,00</td></tr>
-      <tr><td>6.11</td><td>Замена свечи накала</td><td>от 18,00</td></tr>
-      <tr><td>6.12</td><td>Проверка свечей накала одного цилиндра</td><td>от 3,50</td></tr>
-      <tr><td>6.13</td><td>Прописка кода одного цилиндра</td><td>от 5,00</td></tr>
-      <tr><td>6.14</td><td>Замена датчика коленчатого вала</td><td>от 33,00</td></tr>
-      <tr><td>6.15</td><td>Замена датчика распределительного вала</td><td>от 11,00</td></tr>
-      <tr><td>6.16</td><td>Замена датчика массового расхода воздуха</td><td>от 11,00</td></tr>
-      <tr><td>6.17</td><td>Снятие / установка / замена ЭТПУ</td><td>от 54,00</td></tr>
-      <tr><td>6.18</td><td>Запуск автомобиля (запустить двигатель)</td><td>от 10,00</td></tr>
-      <tr><td>6.19</td><td>Слесарные работы</td><td>от 32,00</td></tr>
-    </tbody>
-  </table>
-</section>
-
-<!-- ===== ВАЖНОЕ ПРИМЕЧАНИЕ О КОРРЕКТИРОВКЕ ЦЕН ===== -->
-<div class="notice">
-  <h3>Порядок формирования и корректировки цен</h3>
-  <ol>
-    <li>
-      Указанные в настоящем прайс-листе цены являются <strong>ориентировочными</strong>
-      и не являются публичной офертой в соответствии со ст. 405 Гражданского кодекса
-      Республики Беларусь.
-    </li>
-    <li>
-      Окончательная стоимость работ определяется <strong>после проведения диагностики</strong>
-      и согласования дефектной ведомости с заказчиком. До начала работ заказчик
-      уведомляется о фактической стоимости в письменной или устной форме.
-    </li>
-    <li>
-      Цены могут быть <strong>скорректированы</strong> в следующих случаях:
-      <ul style="margin: 6px 0 0 22px; list-style: disc;">
-        <li>изменение стоимости запасных частей и расходных материалов у поставщика;</li>
-        <li>изменение курса национальной валюты по отношению к иностранным валютам (для импортных запчастей);</li>
-        <li>изменение ставок налогов и сборов, установленных законодательством Республики Беларусь;</li>
-        <li>выявление скрытых дефектов и дополнительных объёмов работ, не предусмотренных первичной диагностикой;</li>
-        <li>изменение тарифов на энергоносители и коммунальные услуги;</li>
-        <li>инфляционные процессы, подтверждённые официальной статистикой Национального статистического комитета Республики Беларусь.</li>
-      </ul>
-    </li>
-    <li>
-      О любом изменении цен заказчик уведомляется <strong>до начала выполнения работ</strong>.
-      Работы, не согласованные с заказчиком по стоимости, не выполняются.
-    </li>
-    <li>
-      Стоимость работ по замене двигателя, капитальному ремонту ТНВД и иным сложным
-      видам ремонта определяется <strong>индивидуально</strong> по результатам дефектовки
-      и указывается в отдельном соглашении (смете).
-    </li>
-    <li>
-      Настоящий прайс-лист действует с момента утверждения и до момента замены его
-      новой редакцией. Предыдущие редакции утрачивают силу с даты утверждения новой.
-    </li>
-  </ol>
-</div>
-
-<!-- ===== ПОДПИСИ ===== -->
-<div class="signs">
-  <div class="sign">
-    <div>Директор ООО «Дизель Карс»</div>
-    <div style="margin-top: 24px;">
-      <span class="sign-line"></span> / <span class="sign-line" style="min-width: 120px;"></span>
+<header>
+  <div class="wrap header-inner">
+    <a href="./" class="logo-wrap" aria-label="DieselCars — ремонт дизельных топливных систем в Минске">
+      <!-- ЛОГОТИП: замените на <img src="logo.svg" alt="DieselCars" width="160" height="40"> -->
+      <span class="logo">Diesel<span>Cars</span></span>
+    </a>
+    <div class="header-info">
+      <span class="header-addr">Минск, ул. Липковская, 6</span>
+      <span class="header-hours">Пн–Пт: 9:00–18:00</span>
     </div>
-    <div class="sign-caption">подпись / расшифровка</div>
+    <a href="tel:+375296194092" class="phone" data-goal="click_phone" data-goal-place="header">+375 (29) 619-40-92</a>
   </div>
-  <div class="sign" style="text-align: right;">
-    <div>«____» __________ 20___ г.</div>
-    <div style="margin-top: 8px;">М.П.</div>
+  <div class="wrap">
+    <nav class="main-nav" aria-label="Основная навигация">
+        <ul>
+          <li><a href="./#services">Услуги</a></li>
+          <li><a href="./#symptoms">Неисправности</a></li>
+          <li><a href="price.html" data-goal="go_to_price" data-goal-place="nav" title="Прайс-лист на ремонт ТНВД и форсунок в Минске" aria-current="page">Цены на ремонт</a></li>
+          <li><a href="./#faq">Вопросы</a></li>
+          <li><a href="./#contacts">Контакты</a></li>
+        </ul>
+      </nav>
   </div>
-</div>
+</header>
 
-<!-- ===== КОЛОНТИТУЛ ===== -->
-<div class="doc-footer">
-  ООО «Дизель Карс» · УНП 191234567 · 220000, г. Минск, ул. Липковская, 6<br>
-  Тел.: +375 (29) 619-40-92 · E-mail: info@dieselcars.by<br>
-  Документ сформирован автоматически. Актуальная версия — на сайте dieselcars.by
-</div>
+<main>
 
+  <div class="wrap no-print">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <ol>
+        <li><a href="./">Главная</a></li>
+        <li><span aria-current="page">Прайс-лист</span></li>
+      </ol>
+    </nav>
+  </div>
+
+  <section class="hero hero--compact">
+    <div class="wrap">
+      <p class="eyebrow">Прайс-лист · цены в BYN · Минск</p>
+      <h1>Прайс-лист на ремонт ТНВД, форсунок и диагностику дизеля в Минске</h1>
+      <p class="lead">Ориентировочная стоимость работ по обслуживанию и ремонту дизельных топливных систем в ООО «Дизель Карс». Окончательная цена определяется после диагностики и согласования дефектной ведомости.</p>
+      <div class="hero-cta">
+        <button type="button" class="btn" data-action="print" data-goal="download_price_pdf" data-goal-place="price_hero">Скачать / распечатать PDF</button>
+        <a href="tel:+375296194092" class="btn btn-ghost" data-goal="click_call_button" data-goal-place="price_hero">Позвонить</a>
+      </div>
+      <p class="price-valid">Прайс-лист действует с {{PRICE_DATE}}</p>
+    </div>
+  </section>
+
+  <!-- Только для печати / PDF: шапка документа и подпись -->
+  <div class="wrap print-only">
+    <p><strong>ООО «Дизель Карс»</strong>, УНП {{UNP}}<br>
+    220000, Республика Беларусь, г. Минск, ул. Липковская, 6 · тел. +375 (29) 619-40-92 · info@dieselcars.by<br>
+    Исх. № {{PRICE_NUMBER}} от {{PRICE_DATE}}</p>
+  </div>
+
+  <div class="wrap chips no-print">
+    <nav aria-label="Разделы прайс-листа">
+      <ul>
+        <li><a href="#diagnostika">Диагностика</a></li>
+        <li><a href="#forsunki-common-rail">Форсунки Common Rail</a></li>
+        <li><a href="#tnvd">ТНВД</a></li>
+        <li><a href="#nasos-forsunki">Насос-форсунки</a></li>
+        <li><a href="#ultrazvuk">Ультразвуковая чистка</a></li>
+        <li><a href="#dvigatel">Замена двигателя</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <section class="wrap section price-section" id="diagnostika">
+    <h2>Диагностика дизельного двигателя и общие работы</h2>
+    <div class="table-wrap">
+      <table>
+        <caption>Цены на диагностику дизеля и общие работы в Минске, BYN</caption>
+        <thead>
+          <tr><th scope="col">№</th><th scope="col">Наименование работ</th><th scope="col">Цена, BYN</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1.1</td><td>Диагностика систем управления двигателем</td><td>от 25,00</td></tr>
+          <tr><td>1.2</td><td>Считывание ошибок блока управления</td><td>от 11,00</td></tr>
+          <tr><td>1.3</td><td>Осмотр автомобиля</td><td>от 9,00</td></tr>
+          <tr><td>1.4</td><td>Поиск неисправности</td><td>от 18,00</td></tr>
+          <tr><td>1.5</td><td>Проверка компрессии одного цилиндра</td><td>от 8,00</td></tr>
+          <tr><td>1.6</td><td>Проверка меток ГРМ</td><td>от 25,00</td></tr>
+          <tr><td>1.7</td><td>Проверка УОВ</td><td>от 10,00</td></tr>
+          <tr><td>1.8</td><td>Регулировка УОВ (легковой автомобиль)</td><td>от 37,00</td></tr>
+          <tr><td>1.9</td><td>Регулировка УОВ (микроавтобус)</td><td>от 48,00</td></tr>
+          <tr><td>1.10</td><td>Регулировка фаз ГРМ</td><td>от 23,00</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="wrap section price-section" id="forsunki-common-rail">
+    <h2>Ремонт форсунок Common Rail</h2>
+    <div class="table-wrap">
+      <table>
+        <caption>Цены на ремонт форсунок Common Rail в Минске, BYN</caption>
+        <thead>
+          <tr><th scope="col">№</th><th scope="col">Наименование работ</th><th scope="col">Цена, BYN</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>2.1</td><td>Проверка гидроплотности топливной системы</td><td>от 13,00</td></tr>
+          <tr><td>2.2</td><td>Диагностика форсунки CR Delphi</td><td>от 10,00</td></tr>
+          <tr><td>2.3</td><td>Проверка форсунки CR с распечаткой</td><td>от 7,50</td></tr>
+          <tr><td>2.4</td><td>Проверка грузовой форсунки CR</td><td>от 10,00</td></tr>
+          <tr><td>2.5</td><td>Ремонт форсунки Common Rail</td><td>от 45,00</td></tr>
+          <tr><td>2.6</td><td>Регулировка форсунки CR</td><td>от 20,00</td></tr>
+          <tr><td>2.7</td><td>Регулировка форсунки CR Bosch</td><td>от 25,00</td></tr>
+          <tr><td>2.8</td><td>Замена распылителя без ремонта форсунки CR</td><td>от 18,00</td></tr>
+          <tr><td>2.9</td><td>Ремонт седла клапана (мультипликатора) CR</td><td>от 18,00</td></tr>
+          <tr><td>2.10</td><td>Раскоксовка гнезда форсунки (1 цилиндр)</td><td>от 40,00</td></tr>
+          <tr><td>2.11</td><td>Правка посадочного гнезда форсунки CR</td><td>от 15,00</td></tr>
+          <tr><td>2.12</td><td>Снятие / установка форсунки CR, 1 цил. (легковой)</td><td>от 10,00</td></tr>
+          <tr><td>2.13</td><td>Снятие / установка форсунки CR, 1 цил. (микроавтобус, внедорожник)</td><td>от 15,00</td></tr>
+          <tr><td>2.14</td><td>Замена датчика системы CR Bosch, Denso</td><td>от 15,00</td></tr>
+          <tr><td>2.15</td><td>Замена штуцера CR</td><td>от 5,00</td></tr>
+          <tr><td>2.16</td><td>Замена уплотнений на контуре низкого давления</td><td>от 27,00</td></tr>
+          <tr><td>2.17</td><td>Замена ТПУ (топливоподкачивающего устройства)</td><td>от 31,00</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="wrap section price-section" id="tnvd">
+    <h2>Ремонт ТНВД</h2>
+    <div class="table-wrap">
+      <table>
+        <caption>Цены на ремонт и замену ТНВД в Минске, BYN</caption>
+        <thead>
+          <tr><th scope="col">№</th><th scope="col">Наименование работ</th><th scope="col">Цена, BYN</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>3.1</td><td>Снятие / установка ТНВД (легковой автомобиль)</td><td>от 110,00</td></tr>
+          <tr><td>3.2</td><td>Снятие / установка ТНВД (микроавтобус, внедорожник)</td><td>от 150,00</td></tr>
+          <tr><td>3.3</td><td>Проверка ТНВД CR</td><td>от 30,00</td></tr>
+          <tr><td>3.4</td><td>Дефектовка ТНВД CR</td><td>от 25,00</td></tr>
+          <tr><td>3.5</td><td>Ремонт ТНВД CR (CP3, CP1, HP3)</td><td>от 120,00</td></tr>
+          <tr><td>3.6</td><td>Ремонт ТНВД CR (Delphi, Denso HP2)</td><td>от 150,00</td></tr>
+          <tr><td>3.7</td><td>Замена сальника ТНВД (без разборки)</td><td>от 5,00</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="wrap section price-section" id="nasos-forsunki">
+    <h2>Ремонт насос-форсунок</h2>
+    <div class="table-wrap">
+      <table>
+        <caption>Цены на ремонт и замену насос-форсунок в Минске, BYN</caption>
+        <thead>
+          <tr><th scope="col">№</th><th scope="col">Наименование работ</th><th scope="col">Цена, BYN</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>4.1</td><td>Снятие / установка насос-форсунки (1 цилиндр)</td><td>от 75,00</td></tr>
+          <tr><td>4.2</td><td>Снятие / установка комплекта насос-форсунок (4 шт.)</td><td>от 125,00</td></tr>
+          <tr><td>4.3</td><td>Снятие / установка комплекта (VW Touareg 2,5)</td><td>от 160,00</td></tr>
+          <tr><td>4.4</td><td>Регулировка начала подачи топлива</td><td>от 38,00</td></tr>
+          <tr><td>4.5</td><td>Замена установочного ремкомплекта (1 шт.)</td><td>от 2,00</td></tr>
+          <tr><td>4.6</td><td>Правка посадочного гнезда насос-форсунки</td><td>от 26,00</td></tr>
+          <tr><td>4.7</td><td>Замена регулировочных винтов с последующей регулировкой</td><td>от 10,00</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="wrap section price-section" id="ultrazvuk">
+    <h2>Ультразвуковая чистка распылителей и топливной системы</h2>
+    <div class="table-wrap">
+      <table>
+        <caption>Цены на ультразвуковую чистку и промывку в Минске, BYN</caption>
+        <thead>
+          <tr><th scope="col">№</th><th scope="col">Наименование работ</th><th scope="col">Цена, BYN</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>5.1</td><td>Ультразвуковая мойка деталей (один сеанс)</td><td>от 8,00</td></tr>
+          <tr><td>5.2</td><td>Ультразвуковая чистка распылителей (2 шт.)</td><td>от 9,00</td></tr>
+          <tr><td>5.3</td><td>Чистка регулятора давления</td><td>от 9,50</td></tr>
+          <tr><td>5.4</td><td>Чистка топливной системы</td><td>от 40,00</td></tr>
+          <tr><td>5.5</td><td>Снятие / установка и чистка клапана EGR</td><td>от 55,00</td></tr>
+          <tr><td>5.6</td><td>Чистка ЭТПУ</td><td>от 15,00</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="wrap section price-section" id="dvigatel">
+    <h2>Замена двигателя и прочие работы</h2>
+    <div class="table-wrap">
+      <table>
+        <caption>Цены на замену двигателя и прочие работы в Минске, BYN</caption>
+        <thead>
+          <tr><th scope="col">№</th><th scope="col">Наименование работ</th><th scope="col">Цена, BYN</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>6.1</td><td>Замена двигателя целиком — с обвязкой и электрикой</td><td>по запросу</td></tr>
+          <tr><td>6.2</td><td>Снятие / установка клапанной крышки (Audi, VW)</td><td>от 13,00</td></tr>
+          <tr><td>6.3</td><td>Снятие / установка впускного коллектора (BMW, Rover)</td><td>от 55,00</td></tr>
+          <tr><td>6.4</td><td>Снятие / установка впускного коллектора (Mercedes)</td><td>от 30,00</td></tr>
+          <tr><td>6.5</td><td>Снятие / установка дозировочного блока</td><td>от 14,00</td></tr>
+          <tr><td>6.6</td><td>Снятие / установка тандемного насоса (Audi, VW)</td><td>от 40,00</td></tr>
+          <tr><td>6.7</td><td>Замена топливного фильтра</td><td>от 15,00</td></tr>
+          <tr><td>6.8</td><td>Снятие / установка топливного фильтра</td><td>от 11,00</td></tr>
+          <tr><td>6.9</td><td>Снятие / установка топливного бака</td><td>от 72,00</td></tr>
+          <tr><td>6.10</td><td>Снятие / установка рейла и трубопровода</td><td>от 21,00</td></tr>
+          <tr><td>6.11</td><td>Замена свечи накала</td><td>от 18,00</td></tr>
+          <tr><td>6.12</td><td>Проверка свечей накала одного цилиндра</td><td>от 3,50</td></tr>
+          <tr><td>6.13</td><td>Прописка кода одного цилиндра</td><td>от 5,00</td></tr>
+          <tr><td>6.14</td><td>Замена датчика коленчатого вала</td><td>от 33,00</td></tr>
+          <tr><td>6.15</td><td>Замена датчика распределительного вала</td><td>от 11,00</td></tr>
+          <tr><td>6.16</td><td>Замена датчика массового расхода воздуха</td><td>от 11,00</td></tr>
+          <tr><td>6.17</td><td>Снятие / установка / замена ЭТПУ</td><td>от 54,00</td></tr>
+          <tr><td>6.18</td><td>Запуск автомобиля (запустить двигатель)</td><td>от 10,00</td></tr>
+          <tr><td>6.19</td><td>Слесарные работы</td><td>от 32,00</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="wrap section price-notes">
+    <h2>Порядок формирования и корректировки цен</h2>
+    <ol>
+      <li>
+        Указанные в настоящем прайс-листе цены являются <strong>ориентировочными</strong>
+        и не являются публичной офертой в соответствии со ст. 405 Гражданского кодекса
+        Республики Беларусь.
+      </li>
+      <li>
+        Окончательная стоимость работ определяется <strong>после проведения диагностики</strong>
+        и согласования дефектной ведомости с заказчиком. До начала работ заказчик
+        уведомляется о фактической стоимости в письменной или устной форме.
+      </li>
+      <li>
+        Цены могут быть <strong>скорректированы</strong> в следующих случаях:
+        <ul>
+          <li>изменение стоимости запасных частей и расходных материалов у поставщика;</li>
+          <li>изменение курса национальной валюты по отношению к иностранным валютам (для импортных запчастей);</li>
+          <li>изменение ставок налогов и сборов, установленных законодательством Республики Беларусь;</li>
+          <li>выявление скрытых дефектов и дополнительных объёмов работ, не предусмотренных первичной диагностикой;</li>
+          <li>изменение тарифов на энергоносители и коммунальные услуги;</li>
+          <li>инфляционные процессы, подтверждённые официальной статистикой Национального статистического комитета Республики Беларусь.</li>
+        </ul>
+      </li>
+      <li>
+        О любом изменении цен заказчик уведомляется <strong>до начала выполнения работ</strong>.
+        Работы, не согласованные с заказчиком по стоимости, не выполняются.
+      </li>
+      <li>
+        Стоимость работ по замене двигателя, капитальному ремонту ТНВД и иным сложным
+        видам ремонта определяется <strong>индивидуально</strong> по результатам дефектовки
+        и указывается в отдельном соглашении (смете).
+      </li>
+      <li>
+        Настоящий прайс-лист действует с момента утверждения и до момента замены его
+        новой редакцией. Предыдущие редакции утрачивают силу с даты утверждения новой.
+      </li>
+  </ol>
+  </section>
+
+  <div class="wrap print-only print-sign">
+    <p>Директор ООО «Дизель Карс» ______________ / ______________ &nbsp;&nbsp;&nbsp; М.П.</p>
+  </div>
+
+  <section class="wrap section no-print" id="faq">
+    <h2>Частые вопросы о ценах на ремонт дизеля</h2>
+    <div class="faq">
+      <details data-goal-toggle="faq_open"><summary>Почему в прайс-листе цены указаны «от»?</summary><p>Стоимость зависит от модели автомобиля, объёма работ и найденных дефектов. Окончательную цену называем после диагностики и согласования дефектной ведомости, до начала работ.</p></details>
+      <details data-goal-toggle="faq_open"><summary>Сколько стоит диагностика дизеля в Минске?</summary><p>Диагностика систем управления двигателем — от 25 BYN, считывание ошибок блока управления — от 11 BYN, поиск неисправности — от 18 BYN.</p></details>
+      <details data-goal-toggle="faq_open"><summary>Сколько стоит ремонт форсунки Common Rail и ТНВД?</summary><p>Ремонт форсунки Common Rail — от 45 BYN. Ремонт ТНВД CR (CP3, CP1, HP3) — от 120 BYN, ТНВД Delphi и Denso HP2 — от 150 BYN. Итоговая сумма зависит от результатов дефектовки.</p></details>
+      <details data-goal-toggle="faq_open"><summary>Как узнать окончательную стоимость до начала ремонта?</summary><p>После диагностики мы сообщаем фактическую стоимость и согласуем её с вами. Работы, не согласованные по стоимости, не выполняются.</p></details>
+    </div>
+    <p class="section-note">Вернуться на главную: <a href="./">ремонт дизельных топливных систем в Минске</a>. Не нашли свою неисправность? <a href="./#symptoms">Признаки неисправности дизеля</a> и <a href="./#order">запись на диагностику</a>.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-title">Реквизиты</p>
+      <p>ООО «Дизель Карс»<br>УНП {{UNP}}</p>
+      <p>Юридический и фактический адрес:<br>220000, Республика Беларусь, г. Минск, ул. Липковская, 6</p>
+      <!-- При необходимости добавьте сведения о государственной регистрации (орган, дата) -->
+    </div>
+    <address>
+      <p class="footer-title">Контакты</p>
+      <p>Режим работы: Пн–Пт, 9:00–18:00</p>
+      <p>Тел.: <a href="tel:+375296194092" data-goal="click_phone" data-goal-place="footer">+375 (29) 619-40-92</a><br>
+      E-mail: <a href="mailto:info@dieselcars.by" data-goal="click_email" data-goal-place="footer">info@dieselcars.by</a></p>
+    </address>
+    <nav class="footer-nav" aria-label="Разделы сайта">
+      <p class="footer-title">Разделы</p>
+      <ul>
+        <li><a href="./#services">Ремонт ТНВД и форсунок Common Rail</a></li>
+        <li><a href="./#order">Диагностика дизеля в Минске</a></li>
+        <li><a href="./#symptoms">Признаки неисправности дизеля</a></li>
+        <li><a href="price.html" data-goal="go_to_price" data-goal-place="footer">Прайс-лист на ремонт ТНВД и форсунок</a></li>
+        <li><a href="./#faq">Частые вопросы по ремонту дизеля</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap footer-bottom">© 2026 ООО «Дизель Карс». Ремонт дизельных топливных систем в Минске.</div>
+</footer>
+
+<!-- YANDEX METRIKA NOSCRIPT: вставьте сюда <noscript>-пиксель Яндекс Метрики -->
+
+<script src="js/goals.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/hexbg.js" defer></script>
 </body>
 </html>

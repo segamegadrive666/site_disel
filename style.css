@@ -1075,3 +1075,132 @@ footer {
     transition: none !important;
   }
 }
+
+
+/* ============================================================
+   v2 · SEO-ДОПОЛНЕНИЯ (палитра и переменные не менялись)
+   ============================================================ */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* --- Навигация в шапке --- */
+.main-nav{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}
+.main-nav ul{display:flex;gap:6px 24px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.main-nav a{display:block;padding:4px 0;white-space:nowrap;font-family:var(--font-display);font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:var(--text-muted);border-bottom:2px solid transparent}
+.main-nav a:hover,.main-nav a[aria-current]{color:var(--accent-soft);border-bottom-color:var(--accent)}
+
+/* --- Хлебные крошки --- */
+.breadcrumbs{padding-top:22px;font-size:.82rem;color:var(--text-dim)}
+.breadcrumbs ol{display:flex;flex-wrap:wrap;gap:6px}
+.breadcrumbs li+li::before{content:"/";margin-right:6px;color:var(--line-soft)}
+.breadcrumbs [aria-current]{color:var(--text-muted)}
+
+/* --- Фото (figure) --- */
+.media{margin:36px 0}
+.media img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:16px;border:1px solid var(--line);background:var(--bg-card)}
+.media figcaption{margin-top:10px;font-size:.82rem;color:var(--text-dim)}
+
+/* --- Карточки: 3 колонки + текстовые абзацы --- */
+.features--3{grid-template-columns:repeat(3,1fr)}
+.feature p+p{margin-top:8px}
+.feature strong{color:var(--accent-soft);font-weight:700}
+.section-note{margin-top:22px}
+
+/* --- Этапы работы --- */
+.steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:20px 0 8px}
+.steps li{counter-increment:s;padding:22px 20px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(150deg,rgba(36,26,20,.9),rgba(28,20,16,.85))}
+.steps li::before{content:"0" counter(s);display:block;margin-bottom:8px;font-family:var(--font-display);font-size:1.6rem;font-weight:900;letter-spacing:-1px;color:var(--accent)}
+.steps h3{font-family:var(--font-display);font-size:1.05rem;font-weight:800;margin-bottom:6px}
+.steps p{margin:0;font-size:.92rem}
+
+/* --- Марки авто --- */
+.car-brands{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:18px 0 8px}
+.car-brands li{padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:rgba(28,20,16,.7);font-family:var(--font-display);font-size:.92rem;font-weight:800;transition:border-color var(--t),color var(--t)}
+.car-brands li:hover{border-color:rgba(255,140,46,.4);color:var(--accent-soft)}
+
+/* --- FAQ (details/summary) --- */
+.faq{display:grid;gap:10px;margin:20px 0 8px}
+.faq details{border:1px solid var(--line);border-radius:14px;background:rgba(28,20,16,.75);transition:border-color var(--t)}
+.faq details[open]{border-color:rgba(255,140,46,.35)}
+.faq summary{position:relative;cursor:pointer;list-style:none;padding:16px 52px 16px 20px;font-family:var(--font-display);font-size:1rem;font-weight:800}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:1.4rem;font-weight:400;color:var(--accent)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{max-width:none;margin:0;padding:0 20px 18px}
+
+/* --- Форма записи --- */
+.lead-form{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:760px;margin:20px 0 8px}
+.lead-form .full{grid-column:1/-1}
+.lead-form label{display:flex;flex-direction:column;gap:6px;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted)}
+.lead-form input,.lead-form textarea{font:inherit;font-size:1rem;font-weight:400;letter-spacing:0;text-transform:none;color:var(--text);background:var(--bg-card);border:1px solid var(--line-soft);border-radius:10px;padding:13px 14px;transition:border-color var(--t),box-shadow var(--t)}
+.lead-form input:focus,.lead-form textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(255,140,46,.15)}
+.lead-form .consent{flex-direction:row;align-items:flex-start;gap:10px;font-size:.85rem;font-weight:400;letter-spacing:0;text-transform:none}
+.lead-form .consent input{margin-top:3px;padding:0;accent-color:var(--accent)}
+.lead-form .hp{position:absolute;left:-9999px}
+.form-status{min-height:1.4em;margin:0;font-size:.92rem;color:var(--accent-soft)}
+
+/* --- Контакты и мессенджеры --- */
+.contacts{font-style:normal}
+.contacts p{line-height:1.8}
+.msgr-row{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 4px}
+.msgr{padding:12px 20px;font-size:.8rem}
+.msgr--viber:hover{border-color:#7360f2;color:#b3a8ff}
+.msgr--telegram:hover{border-color:#29a9eb;color:#8fd3f7}
+.msgr--whatsapp:hover{border-color:#25d366;color:#7ee8a6}
+
+/* --- Подвал с реквизитами --- */
+.site-footer{display:block;margin-top:72px;padding:44px 0 0;font-size:.88rem}
+.footer-grid{display:grid;grid-template-columns:1.2fr 1.2fr 1fr;gap:32px}
+.site-footer p,.site-footer address{max-width:none;margin:0 0 8px;font-style:normal;line-height:1.6;color:var(--text-muted)}
+.footer-title{font-family:var(--font-display);font-size:.74rem;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--text)!important}
+.site-footer li{margin-bottom:6px}
+.footer-bottom{margin-top:32px;padding-top:18px;padding-bottom:24px;border-top:1px solid var(--line);font-size:.8rem;color:var(--text-dim)}
+
+/* --- Страница прайса --- */
+.hero--compact{padding:36px 0 24px}
+.hero--compact h1{max-width:900px;font-size:2.7rem;line-height:1.05;letter-spacing:-1.2px}
+.price-valid{margin:18px 0 0;font-size:.85rem;color:var(--text-dim)}
+.chips ul{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.chips a{display:inline-block;padding:9px 16px;border:1px solid var(--line-soft);border-radius:999px;font-size:.85rem;font-weight:600;color:var(--text-muted)}
+.chips a:hover{border-color:rgba(255,140,46,.45);color:var(--accent-soft)}
+caption{caption-side:top;padding:14px 16px;text-align:left;font-size:.82rem;color:var(--text-dim);border-bottom:1px solid var(--line)}
+.price-section{scroll-margin-top:120px}
+.price-notes ol{display:grid;gap:10px;max-width:760px;padding-left:22px;color:var(--text-muted)}
+.price-notes ul{display:grid;gap:4px;margin:6px 0 0 22px;list-style:disc}
+.price-notes strong{color:var(--text)}
+.print-only{display:none}
+
+/* --- Адаптив дополнений --- */
+@media (max-width:900px){
+  .features--3,.steps{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:768px){.hero--compact h1{font-size:2.1rem;letter-spacing:-.8px}}
+@media (max-width:640px){
+  header{position:static}
+  .features--3,.steps,.lead-form,.footer-grid{grid-template-columns:1fr}
+  .site-footer{margin-top:56px;padding-top:32px}
+  .msgr{flex:1 1 auto;text-align:center}
+  .hero--compact h1{font-size:1.7rem}
+}
+
+/* --- Печать / «Сохранить как PDF» (прайс) --- */
+@media print{
+  *,*::before,*::after{color:#000!important;background:transparent!important;box-shadow:none!important;text-shadow:none!important;-webkit-text-fill-color:#000!important;animation:none!important;transition:none!important;backdrop-filter:none!important}
+  body{font-size:11pt;background:#fff!important}
+  #hexbg,header,.breadcrumbs,.hero-cta,.chips,.no-print,.footer-nav,.eyebrow{display:none!important}
+  .print-only{display:block}
+  .wrap{max-width:none;padding:0}
+  .hero,.hero--compact{padding:0 0 8pt}
+  .hero h1,.hero--compact h1{font-size:18pt;margin:8pt 0}
+  .lead,p{max-width:none}
+  h2{margin:16pt 0 6pt;font-size:11pt;break-after:avoid}
+  .table-wrap{border:1px solid #000;margin:6pt 0 12pt;overflow:visible}
+  table{min-width:0;font-size:10pt}
+  thead th{background:#e6e6e6!important;border:1px solid #000}
+  tbody td{border:1px solid #000;padding:5pt 8pt}
+  tr{break-inside:avoid}
+  caption{border-bottom:1px solid #000}
+  .site-footer{margin-top:16pt;padding-top:8pt;border-top:1px solid #000}
+  .footer-grid{display:block}
+  .print-sign{margin-top:28pt}
+}

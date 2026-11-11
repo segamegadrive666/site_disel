@@ -1,83 +1,230 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" prefix="og: https://ogp.me/ns#">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DieselCars — ремонт дизельных топливных систем в Минске</title>
-<meta name="description" content="Ремонт и диагностика дизельных топливных систем в Минске. Bosch, Lucas, Common Rail. 8 подъёмников, электрик в штате, парковка. Работаем с 2000 года.">
+<title>Ремонт ТНВД и форсунок Common Rail в Минске | DieselCars</title>
+<meta name="description" content="Ремонт ТНВД и форсунок Common Rail в Минске, диагностика дизеля на стенде. Цены в BYN, гарантия на работы. Звоните: +375 29 619-40-92.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://dieselcars.by/">
+<meta name="theme-color" content="#0d0a08">
+
+<!-- Гео-метатеги -->
+<meta name="geo.region" content="BY-HM">
+<meta name="geo.placename" content="Минск">
+<meta name="geo.position" content="53.9167638;27.6856693">
+<meta name="ICBM" content="53.9167638, 27.6856693">
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="DieselCars">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_BY">
+<meta property="og:url" content="https://dieselcars.by/">
+<meta property="og:title" content="Ремонт ТНВД и форсунок Common Rail в Минске | DieselCars">
+<meta property="og:description" content="Ремонт ТНВД и форсунок Common Rail в Минске, диагностика дизеля на стенде. Цены в BYN, гарантия на работы. Звоните: +375 29 619-40-92.">
+<meta property="og:image" content="https://dieselcars.by/img/og-dieselcars.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ремонт ТНВД и форсунок Common Rail — DieselCars, Минск">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<!-- GTM / GA4 HEAD: вставьте сюда код Google Tag Manager или gtag.js (GA4) -->
+<!-- /GTM / GA4 HEAD -->
+
+<!-- YANDEX METRIKA: вставьте сюда код счётчика Яндекс Метрики (и укажите его ID в js/goals.js) -->
+<!-- /YANDEX METRIKA -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-  <!-- Микроразметка Schema.org (LocalBusiness / AutoRepair) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AutoRepair",
-    "name": "DieselCars",
-    "alternateName": "Дизель Карс",
-    "url": "https://dieselcars.by",
-    "logo": "https://dieselcars.by/logo.png",
-    "image": "https://dieselcars.by/logo.png",
-    "description": "Ремонт и диагностика дизельных топливных систем в Минске. Bosch, Lucas, Common Rail.",
-    "telephone": "+375296194092",
-    "priceRange": "BYN",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "ул. Липковская, 6",
-      "addressLocality": "Минск",
-      "postalCode": "220000",
-      "addressCountry": "BY"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "53.9167638",
-      "longitude": "27.6856693"
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "09:00",
-        "closes": "18:00"
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AutoRepair",
+      "@id": "https://dieselcars.by/#business",
+      "name": "DieselCars",
+      "legalName": "ООО «Дизель Карс»",
+      "alternateName": "Дизель Карс",
+      "taxID": "{{UNP}}",
+      "url": "https://dieselcars.by/",
+      "logo": "https://dieselcars.by/logo.png",
+      "image": [
+        "https://dieselcars.by/img/og-dieselcars.jpg",
+        "https://dieselcars.by/logo.png"
+      ],
+      "description": "Ремонт ТНВД и форсунок Common Rail, диагностика дизельных двигателей в Минске. Bosch, Lucas, Delphi, Denso, Siemens.",
+      "telephone": "+375296194092",
+      "email": "info@dieselcars.by",
+      "priceRange": "2–160 BYN",
+      "currenciesAccepted": "BYN",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Липковская, 6",
+        "addressLocality": "Минск",
+        "addressRegion": "Минск",
+        "postalCode": "220000",
+        "addressCountry": "BY"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.9167638,
+        "longitude": 27.6856693
+      },
+      "hasMap": "https://yandex.by/maps/?ll=27.6856693%2C53.9167638&z=17&pt=27.6856693,53.9167638",
+      "areaServed": {
+        "@type": "City",
+        "name": "Минск"
+      },
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Услуги по ремонту дизельных топливных систем",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Диагностика систем управления двигателем"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 25,
+              "priceCurrency": "BYN"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт форсунки Common Rail"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 45,
+              "priceCurrency": "BYN"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт ТНВД CR (CP3, CP1, HP3)"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 120,
+              "priceCurrency": "BYN"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Снятие / установка ТНВД (легковой автомобиль)"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 110,
+              "priceCurrency": "BYN"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ультразвуковая чистка распылителей (2 шт.)"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 9,
+              "priceCurrency": "BYN"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Замена распылителя без ремонта форсунки CR"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 18,
+              "priceCurrency": "BYN"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Снятие / установка насос-форсунки (1 цилиндр)"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 75,
+              "priceCurrency": "BYN"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Замена двигателя целиком — с обвязкой и электрикой"
+            }
+          }
+        ]
       }
-    ],
-    "sameAs": [
-      "https://www.google.com/maps/place/СТО+Дизель-Сервис/@53.9167638,27.6856693"
-    ]
-  }
-  </script>
+    }
+  ]
+}
+</script>
 </head>
 <body>
+<!-- GTM NOSCRIPT (BODY): вставьте сюда <noscript>-iframe от Google Tag Manager -->
 
-<!-- ФОН: живые шестиугольники -->
 <canvas id="hexbg" aria-hidden="true"></canvas>
 
-<!-- ===== ШАПКА ===== -->
 <header>
   <div class="wrap header-inner">
-
-    <!-- ЛОГО -->
-    <a href="#" class="logo-wrap" aria-label="DieselCars — на главную">
-      <!-- МЕСТО ДЛЯ ЛОГОТИПА: вставьте <img src="logo.svg" alt="DieselCars"> -->
+    <a href="./" class="logo-wrap" aria-label="DieselCars — ремонт дизельных топливных систем в Минске">
+      <!-- ЛОГОТИП: замените на <img src="logo.svg" alt="DieselCars" width="160" height="40"> -->
       <span class="logo">Diesel<span>Cars</span></span>
     </a>
-
-    <!-- ИНФО: адрес + график -->
     <div class="header-info">
       <span class="header-addr">Минск, ул. Липковская, 6</span>
       <span class="header-hours">Пн–Пт: 9:00–18:00</span>
     </div>
-
-    <!-- ТЕЛЕФОН -->
-    <a href="tel:+375296194092" class="phone">+375 (29) 619-40-92</a>
-
+    <a href="tel:+375296194092" class="phone" data-goal="click_phone" data-goal-place="header">+375 (29) 619-40-92</a>
+  </div>
+  <div class="wrap">
+    <nav class="main-nav" aria-label="Основная навигация">
+        <ul>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#symptoms">Неисправности</a></li>
+          <li><a href="price.html" data-goal="go_to_price" data-goal-place="nav" title="Прайс-лист на ремонт ТНВД и форсунок в Минске">Цены на ремонт</a></li>
+          <li><a href="#faq">Вопросы</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
   </div>
 </header>
 
@@ -86,51 +233,45 @@
   <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="wrap">
-      <p class="eyebrow">Minsk · Lipkovskaya 6 · с 2000 года</p>
-      <h1>Ремонт Дизельных<br>Топливынх Систем</h1>
-      <p class="lead">Диагностика, ремонт и обслуживание дизельных легковых автомобилей и микроавтобусов. Топливная аппаратура Bosch, Lucas, Common Rail.</p>
+      <p class="eyebrow">Минск · ул. Липковская, 6 · с 2000 года</p>
+      <h1>Ремонт дизельных <br>топливных систем в Минске</h1>
+      <p class="lead">Диагностика, ремонт ТНВД и форсунок Common Rail, обслуживание дизельных легковых автомобилей и микроавтобусов. Топливная аппаратура Bosch, Lucas, Delphi, Denso, Siemens.</p>
       <div class="hero-cta">
-        <a href="tel:+375296194092" class="btn">Позвонить</a>
-        <a href="#prices" class="btn btn-ghost">Смотреть цены</a>
+        <a href="tel:+375296194092" class="btn" data-goal="click_call_button" data-goal-place="hero">Позвонить</a>
+        <a href="price.html" class="btn btn-ghost" data-goal="go_to_price" data-goal-place="hero" title="Прайс-лист на ремонт ТНВД и форсунок в Минске">Цены на ремонт ТНВД</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== ИНФОГРАФИКА ===== -->
-  <section class="stats">
+  <!-- ===== ИНФОГРАФИКА: реальные числа в HTML, JS только анимирует ===== -->
+  <section class="stats" aria-label="DieselCars в цифрах">
     <div class="wrap stats-grid">
-
       <div class="stat">
-        <span class="stat-num" data-count="25" data-suffix="+">0</span>
+        <span class="stat-num" data-count="25" data-suffix="+">25+</span>
         <span class="stat-label">лет на рынке</span>
         <span class="stat-sub">работаем с 2000 года</span>
       </div>
-
       <div class="stat">
-        <span class="stat-num" data-count="8" data-suffix="">0</span>
+        <span class="stat-num" data-count="8" data-suffix="">8</span>
         <span class="stat-label">подъёмников</span>
         <span class="stat-sub">без очереди на бокс</span>
       </div>
-
       <div class="stat">
-        <span class="stat-num" data-count="1200" data-suffix="+">0</span>
+        <span class="stat-num" data-count="1200" data-suffix="+">1200+</span>
         <span class="stat-label">форсунок в год</span>
         <span class="stat-sub">проходят стенд</span>
       </div>
-
       <div class="stat">
-        <span class="stat-num" data-count="100" data-suffix="%">0</span>
+        <span class="stat-num" data-count="100" data-suffix="%">100%</span>
         <span class="stat-label">точность диагностики</span>
         <span class="stat-sub">на оригинальном стенде</span>
       </div>
-
     </div>
   </section>
 
-  <!-- ===== ЧТО ЕЩЁ МОЖЕМ ===== -->
-  <section class="wrap section">
-    <h2>что ещё</h2>
-
+  <!-- ===== ПРЕИМУЩЕСТВА ===== -->
+  <section class="wrap section" id="advantages">
+    <h2>Преимущества сервиса DieselCars</h2>
     <div class="features">
 
       <article class="feature">
@@ -163,15 +304,15 @@
         </span>
         <h3>Сертификаты</h3>
         <p>Подтверждённая квалификация и допуски — можно посмотреть и проверить.</p>
-        <a href="/certificate" class="feature-link">Смотреть сертификаты →</a>
+        <a href="/certificate" class="feature-link">Сертификаты и допуски мастеров →</a>
       </article>
 
     </div>
   </section>
 
   <!-- ===== ПЕРЕЧЕНЬ РАБОТ ===== -->
-  <section class="wrap section">
-    <h2>Перечень работ</h2>
+  <section class="wrap section" id="services">
+    <h2>Перечень работ по ремонту дизельных топливных систем</h2>
     <ul class="services">
       <li>Диагностика топливной системы и двигателя</li>
       <li>Ремонт ТНВД и форсунок Common Rail</li>
@@ -182,15 +323,67 @@
       <li>Регулировка и кодирование форсунок</li>
       <li>Замена двигателя целиком — с обвязкой и электрикой</li>
     </ul>
+    <p>Стоимость каждой работы — в <a href="price.html" data-goal="go_to_price" data-goal-place="services">прайс-листе на ремонт ТНВД, форсунок Common Rail и насос-форсунок в Минске</a>.</p>
   </section>
 
   <div class="wrap">
-    <div class="img">[ФОТО — цех / оборудование / крупный план форсунки]</div>
+    <figure class="media">
+      <img src="img/dieselcars-stend-forsunok.jpg"
+           alt="Проверка дизельной форсунки Common Rail на стенде в мастерской DieselCars, Минск"
+           title="Стендовая проверка и ремонт форсунок Common Rail — DieselCars, Минск"
+           width="1200" height="675" loading="lazy" decoding="async">
+      <figcaption>Цех DieselCars на ул. Липковской, 6: стенд для проверки форсунок и ТНВД.</figcaption>
+    </figure>
   </div>
 
-  <!-- ===== СИСТЕМЫ ===== -->
-  <section class="wrap section">
-    <h2>Системы</h2>
+  <!-- ===== ПРИЗНАКИ НЕИСПРАВНОСТИ ===== -->
+  <section class="wrap section" id="symptoms">
+    <h2>Признаки неисправности топливной системы дизеля</h2>
+    <p>Если ваш дизель ведёт себя так, не откладывайте диагностику: износ форсунок и ТНВД быстро превращается в дорогой ремонт.</p>
+    <div class="features features--3">
+      <article class="feature">
+        <h3>Дизель троит</h3>
+        <p>Двигатель работает неровно: дёргается, вибрирует, теряет тягу.</p>
+        <p><strong>Возможные причины:</strong> изношенные распылители, потеря давления в рейле, неисправная форсунка или насос-форсунка.</p>
+        <p><strong>Что проверяем:</strong> ошибки блока управления, форсунки на стенде, компрессию и гидроплотность системы.</p>
+      </article>
+      <article class="feature">
+        <h3>Чёрный дым из выхлопа</h3>
+        <p>Топливо сгорает не полностью, особенно под нагрузкой.</p>
+        <p><strong>Возможные причины:</strong> плохой распыл форсунок, избыточная подача, датчик массового расхода воздуха, клапан EGR.</p>
+        <p><strong>Что проверяем:</strong> форсунки на стенде, датчики, чистку и работу клапана EGR.</p>
+      </article>
+      <article class="feature">
+        <h3>Белый или серый дым</h3>
+        <p>Дым заметен при запуске и прогреве двигателя.</p>
+        <p><strong>Возможные причины:</strong> нарушенный угол опережения впрыска, неисправные форсунки, свечи накала. Если пропадает охлаждающая жидкость, отдельно проверяют систему охлаждения.</p>
+        <p><strong>Что проверяем:</strong> УОВ, форсунки, свечи накала, фазы ГРМ.</p>
+      </article>
+      <article class="feature">
+        <h3>Плохо заводится на горячую</h3>
+        <p>Холодный двигатель стартует нормально, а после остановки заводится долго.</p>
+        <p><strong>Возможные причины:</strong> подтекание форсунок, падение давления в рейке, износ ТНВД, неисправный датчик.</p>
+        <p><strong>Что проверяем:</strong> гидроплотность топливной системы, ТНВД и датчики.</p>
+      </article>
+      <article class="feature">
+        <h3>Плавают обороты</h3>
+        <p>Холостой ход нестабилен, обороты «гуляют» без причины.</p>
+        <p><strong>Возможные причины:</strong> нестабильное давление в рейле, регулятор давления, датчики, подсос воздуха в топливной системе.</p>
+        <p><strong>Что проверяем:</strong> ошибки, регулятор давления, герметичность контура низкого давления.</p>
+      </article>
+      <article class="feature">
+        <h3>Вырос расход топлива</h3>
+        <p>Дизель стал «есть» заметно больше при прежнем стиле езды.</p>
+        <p><strong>Возможные причины:</strong> износ распылителей, перелив форсунок, сбитые УОВ или фазы ГРМ.</p>
+        <p><strong>Что проверяем:</strong> форсунки на стенде, метки ГРМ и УОВ, давление в системе.</p>
+      </article>
+    </div>
+    <p class="section-note">Узнали свой случай? <a href="#order" data-goal="click_call_button" data-goal-place="symptoms">Запишитесь на диагностику дизеля в Минске</a> или позвоните по телефону <a href="tel:+375296194092" data-goal="click_phone" data-goal-place="symptoms">+375 (29) 619-40-92</a>.</p>
+  </section>
+
+  <!-- ===== СИСТЕМЫ И МАРКИ ===== -->
+  <section class="wrap section" id="brands">
+    <h2>Обслуживаемые топливные системы</h2>
     <div class="brands">
       <span>Bosch</span>
       <span>Lucas</span>
@@ -199,238 +392,160 @@
       <span>Delphi</span>
       <span>Denso</span>
     </div>
+    <h2>Обслуживаемые марки автомобилей</h2>
+    <p>Ремонтируем форсунки, ТНВД и насос-форсунки дизельных автомобилей. Если вашей марки нет в списке, позвоните, уточним.</p>
+    <ul class="car-brands">
+      <li>Mercedes-Benz</li>
+      <li>Volkswagen</li>
+      <li>Audi</li>
+      <li>BMW</li>
+      <li>Renault</li>
+      <li>Ford</li>
+      <li>Peugeot</li>
+      <li>Citroën</li>
+      <li>Iveco</li>
+      <li>Rover</li>
+    </ul>
+  </section>
+
+  <!-- ===== ЭТАПЫ И ГАРАНТИЯ ===== -->
+  <section class="wrap section" id="process">
+    <h2>Этапы работы и гарантия</h2>
+    <ol class="steps">
+      <li><h3>Приёмка автомобиля</h3><p>Выслушиваем жалобы, осматриваем автомобиль, фиксируем состояние.</p></li>
+      <li><h3>Компьютерная и стендовая диагностика</h3><p>Считываем ошибки, проверяем топливную систему, форсунки и ТНВД на стенде.</p></li>
+      <li><h3>Согласование сметы</h3><p>Называем причину неисправности и стоимость. Работы без вашего согласия не начинаем.</p></li>
+      <li><h3>Ремонт</h3><p>Ремонтируем или заменяем форсунки, ТНВД, распылители, уплотнения и датчики.</p></li>
+      <li><h3>Кодирование и регулировка</h3><p>Прописываем коды форсунок, регулируем подачу, проверяем работу двигателя.</p></li>
+      <li><h3>Гарантия</h3><p>На работы и детали действует гарантия. Срок и условия указаны в заказ-наряде.</p></li>
+    </ol>
   </section>
 
   <!-- ===== ЦЕНЫ ===== -->
   <section class="wrap section" id="prices">
-    <h2>Цены</h2>
+    <h2>Цены на ремонт ТНВД и форсунок в Минске</h2>
     <p>Точная стоимость — после диагностики. Ниже ориентиры по основным работам.</p>
     <div class="table-wrap">
       <table>
+        <caption>Ориентировочные цены на основные работы, BYN</caption>
         <thead>
-          <tr><th>№</th><th>Работа</th><th>Цена</th></tr>
+          <tr><th scope="col">№</th><th scope="col">Работа</th><th scope="col">Цена, BYN</th></tr>
         </thead>
         <tbody>
-          <tr><td>01</td><td>Диагностика топливной системы</td><td>от 25 р.</td></tr>
-          <tr><td>02</td><td>Снятие / установка форсунки (1 цил.)</td><td>от 10 р.</td></tr>
-          <tr><td>03</td><td>Проверка форсунки на стенде</td><td>от 10 р.</td></tr>
-          <tr><td>04</td><td>Ремонт форсунки Common Rail</td><td>от 45 р.</td></tr>
-          <tr><td>05</td><td>Снятие / установка ТНВД (легковой)</td><td>от 110 р.</td></tr>
-          <tr><td>06</td><td>Ремонт ТНВД Common Rail</td><td>от 120 р.</td></tr>
-          <tr><td>07</td><td>Ультразвуковая чистка распылителей</td><td>от 9 р.</td></tr>
-          <tr><td>08</td><td>Замена распылителя</td><td>от 18 р.</td></tr>
+          <tr><td>01</td><td>Диагностика топливной системы</td><td>от 25,00</td></tr>
+          <tr><td>02</td><td>Снятие / установка форсунки (1 цил.)</td><td>от 10,00</td></tr>
+          <tr><td>03</td><td>Проверка форсунки на стенде</td><td>от 10,00</td></tr>
+          <tr><td>04</td><td>Ремонт форсунки Common Rail</td><td>от 45,00</td></tr>
+          <tr><td>05</td><td>Снятие / установка ТНВД (легковой)</td><td>от 110,00</td></tr>
+          <tr><td>06</td><td>Ремонт ТНВД Common Rail</td><td>от 120,00</td></tr>
+          <tr><td>07</td><td>Ультразвуковая чистка распылителей</td><td>от 9,00</td></tr>
+          <tr><td>08</td><td>Замена распылителя</td><td>от 18,00</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
-    <!-- ===== ПЛАШКА: ПОЛНЫЙ ПРАЙС ===== -->
-  <section class="wrap">
-    <a href="price.html" class="price-banner">
+  <div class="wrap">
+    <a href="price.html" class="price-banner" data-goal="go_to_price" data-goal-place="banner">
       <div class="price-banner__text">
         <span class="price-banner__eyebrow">Полный прайс-лист</span>
-        <h3 class="price-banner__title">Все работы и цены — на отдельной странице</h3>
-        <p class="price-banner__sub">Диагностика, ремонт ТНВД, форсунки, насос-форсунки, замена двигателя — с ценами и сроками.</p>
+        <span class="price-banner__title">Прайс-лист на ремонт ТНВД, форсунок и диагностику дизеля в Минске</span>
+        <p class="price-banner__sub">Диагностика, ремонт ТНВД, форсунки, насос-форсунки, замена двигателя — все работы с ценами в BYN.</p>
       </div>
       <span class="price-banner__arrow" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </span>
     </a>
+  </div>
+
+  <!-- ===== ЗАПИСЬ НА ДИАГНОСТИКУ ===== -->
+  <section class="wrap section" id="order">
+    <h2>Запись на диагностику дизеля в Минске</h2>
+    <p>Оставьте телефон, и мы перезвоним в рабочее время, чтобы согласовать визит.</p>
+    <form id="lead-form" class="lead-form" data-goal="submit_diagnostic_form" data-goal-place="order_form" data-endpoint="{{FORM_ENDPOINT}}" novalidate>
+      <label>Имя<input type="text" name="name" autocomplete="name" required maxlength="60"></label>
+      <label>Телефон<input type="tel" name="phone" autocomplete="tel" inputmode="tel" required pattern="^\+?[0-9\s()\-]{7,20}$" placeholder="+375 (__) ___-__-__"></label>
+      <label class="full">Автомобиль<input type="text" name="car" maxlength="80" placeholder="Марка, модель, год"></label>
+      <label class="full">Что беспокоит<textarea name="problem" rows="3" maxlength="500" placeholder="Например: троит на холодную, чёрный дым"></textarea></label>
+      <label class="hp" aria-hidden="true">Сайт<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+      <label class="consent full"><input type="checkbox" name="consent" required> Даю согласие на обработку персональных данных для связи со мной</label>
+      <div class="full"><button type="submit" class="btn">Записаться на диагностику</button></div>
+      <p class="form-status full" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="wrap section" id="faq">
+    <h2>Частые вопросы по ремонту дизеля</h2>
+    <div class="faq">
+      <details data-goal-toggle="faq_open"><summary>Сколько времени занимает ремонт ТНВД и форсунок?</summary><p>Срок зависит от модели автомобиля, типа топливной системы и найденных неисправностей. Диагностику проводим за один визит, а точные сроки ремонта называем после дефектовки, при согласовании сметы.</p></details>
+      <details data-goal-toggle="faq_open"><summary>Можно ли сделать диагностику дизеля без снятия форсунок и ТНВД?</summary><p>Да. Считывание ошибок блока управления и проверку топливной системы выполняем на автомобиле, без снятия узлов. Если нужно проверить форсунки на стенде, их снимают, и мы заранее согласуем это с вами.</p></details>
+      <details data-goal-toggle="faq_open"><summary>Есть ли запчасти и ремкомплекты в наличии?</summary><p>Работаем с распространёнными распылителями, ремкомплектами и датчиками. Если нужной детали нет на месте, срок поставки называем при согласовании сметы, до начала ремонта.</p></details>
+      <details data-goal-toggle="faq_open"><summary>Какая гарантия на ремонт ТНВД и форсунок?</summary><p>На выполненные работы и установленные детали действует гарантия. Её срок зависит от вида работ и указывается в заказ-наряде, уточняйте при оформлении.</p></details>
+      <details data-goal-toggle="faq_open"><summary>Нужна ли предварительная запись?</summary><p>Диагностику стараемся проводить без многодневной очереди. Чтобы не ждать, позвоните или оставьте заявку на сайте, и мы согласуем удобное время.</p></details>
+    </div>
   </section>
 
   <!-- ===== КОНТАКТЫ ===== -->
-  <section class="wrap section">
-    <h2>Контакты</h2>
-    <p>
-      Минск, ул. Липковская, 6<br>
-      Пн–Пт: 9:00–18:00<br>
-      +375 (29) 619-40-92
-    </p>
-    
-    <!-- Блок с картой -->
+  <section class="wrap section" id="contacts">
+    <h2>Контакты и схема проезда</h2>
+    <address class="contacts">
+      <p>
+        <strong>ООО «Дизель Карс»</strong><br>
+        Минск, ул. Липковская, 6<br>
+        Пн–Пт: 9:00–18:00<br>
+        <a href="tel:+375296194092" data-goal="click_phone" data-goal-place="contacts">+375 (29) 619-40-92</a><br>
+        <a href="mailto:info@dieselcars.by" data-goal="click_email" data-goal-place="contacts">info@dieselcars.by</a>
+      </p>
+    </address>
+
+    <div class="msgr-row">
+      <a class="btn btn-ghost msgr msgr--viber" href="viber://chat?number=%2B375296194092" data-goal="click_viber" data-goal-place="contacts">Viber</a>
+      <a class="btn btn-ghost msgr msgr--telegram" href="https://t.me/+375296194092" target="_blank" rel="noopener" data-goal="click_telegram" data-goal-place="contacts">Telegram</a>
+      <a class="btn btn-ghost msgr msgr--whatsapp" href="https://wa.me/375296194092" target="_blank" rel="noopener" data-goal="click_whatsapp" data-goal-place="contacts">WhatsApp</a>
+      <a class="btn btn-ghost msgr" href="https://yandex.by/maps/?rtext=~53.9167638,27.6856693&amp;rtt=auto" target="_blank" rel="noopener" data-goal="click_route" data-goal-place="contacts">Построить маршрут</a>
+    </div>
+
     <div class="img map">
-      <iframe 
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3A444822249ce218606a26cbd649e1cc3ddb65e5cfa3f42db873479c99d7f280b8&amp;source=constructor" 
-        width="100%" 
-        height="100%" 
-        frameborder="0"
-        title="Карта проезда к СТО Дизель Карс"
-        loading="lazy"
-        style="border:0; position:absolute; inset:0; width:100%; height:100%;">
-      </iframe>
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A444822249ce218606a26cbd649e1cc3ddb65e5cfa3f42db873479c99d7f280b8&amp;source=constructor"
+              title="Карта проезда к СТО Дизель Карс: Минск, ул. Липковская, 6" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
 
 </main>
 
-<footer class="wrap">
-  <span>© DieselCars · с 2000 года</span>
-  <span>Минск, Липковская, 6</span>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-title">Реквизиты</p>
+      <p>ООО «Дизель Карс»<br>УНП {{UNP}}</p>
+      <p>Юридический и фактический адрес:<br>220000, Республика Беларусь, г. Минск, ул. Липковская, 6</p>
+      <!-- При необходимости добавьте сведения о государственной регистрации (орган, дата) -->
+    </div>
+    <address>
+      <p class="footer-title">Контакты</p>
+      <p>Режим работы: Пн–Пт, 9:00–18:00</p>
+      <p>Тел.: <a href="tel:+375296194092" data-goal="click_phone" data-goal-place="footer">+375 (29) 619-40-92</a><br>
+      E-mail: <a href="mailto:info@dieselcars.by" data-goal="click_email" data-goal-place="footer">info@dieselcars.by</a></p>
+    </address>
+    <nav class="footer-nav" aria-label="Разделы сайта">
+      <p class="footer-title">Разделы</p>
+      <ul>
+        <li><a href="./#services">Ремонт ТНВД и форсунок Common Rail</a></li>
+        <li><a href="./#order">Диагностика дизеля в Минске</a></li>
+        <li><a href="./#symptoms">Признаки неисправности дизеля</a></li>
+        <li><a href="price.html" data-goal="go_to_price" data-goal-place="footer">Прайс-лист на ремонт ТНВД и форсунок</a></li>
+        <li><a href="./#faq">Частые вопросы по ремонту дизеля</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap footer-bottom">© 2026 ООО «Дизель Карс». Ремонт дизельных топливных систем в Минске.</div>
 </footer>
 
-<script>
-/* ===== ФОН: живые шестиугольники (тёплая палитра) ===== */
-(function () {
-  const c = document.getElementById('hexbg');
-  if (!c) return;
-  const ctx = c.getContext('2d');
-  const DPR = Math.min(window.devicePixelRatio || 1, 2);
+<!-- YANDEX METRIKA NOSCRIPT: вставьте сюда <noscript>-пиксель Яндекс Метрики -->
 
-  let W = 0, H = 0;
-  let hexes = [];
-  let mouse = { x: -9999, y: -9999 };
-  let t = 0;
-  let rafId = null;
-
-  const R = 34;
-  const HSTEP = R * 1.5;
-  const VSTEP = R * Math.sqrt(3);
-
-  function resize() {
-    W = window.innerWidth;
-    H = window.innerHeight;
-    c.width = W * DPR;
-    c.height = H * DPR;
-    c.style.width = W + 'px';
-    c.style.height = H + 'px';
-    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-    build();
-  }
-
-  function build() {
-    hexes = [];
-    const cols = Math.ceil(W / HSTEP) + 2;
-    const rows = Math.ceil(H / VSTEP) + 2;
-    for (let row = 0; row < rows; row++) {
-      for (let col = 0; col < cols; col++) {
-        const x = col * HSTEP;
-        const y = row * VSTEP + (col % 2 ? VSTEP / 2 : 0);
-        hexes.push({
-          x, y,
-          phase: Math.random() * Math.PI * 2,
-          speed: 0.3 + Math.random() * 0.5,
-        });
-      }
-    }
-  }
-
-  function hexPath(x, y, r) {
-    ctx.beginPath();
-    for (let i = 0; i < 6; i++) {
-      const a = (Math.PI / 3) * i - Math.PI / 6;
-      const px = x + r * Math.cos(a);
-      const py = y + r * Math.sin(a);
-      i === 0 ? ctx.moveTo(px, py) : ctx.lineTo(px, py);
-    }
-    ctx.closePath();
-  }
-
-  function draw() {
-    ctx.clearRect(0, 0, W, H);
-    t += 0.005;
-
-    for (const h of hexes) {
-      const dist = Math.hypot(h.x - mouse.x, h.y - mouse.y);
-      const near = Math.max(0, 1 - dist / 280);
-
-      const breath = 0.5 + 0.18 * Math.sin(t * h.speed + h.phase);
-
-      /* ТЁПЛАЯ ПАЛИТРА: коричневый -> оранжевый -> янтарь */
-      const mix = near * 0.75 + breath * 0.25;
-
-      const hue   = 22 + mix * 16;   // 22 → 38
-      const sat   = 50 + mix * 50;   // 50% → 100%
-      const light = 30 + mix * 42;   // 30% → 72%
-
-      const alpha = 0.08 + near * 0.30 + breath * 0.05;
-
-      hexPath(h.x, h.y, R * 0.94);
-      ctx.strokeStyle = `hsla(${hue}, ${sat}%, ${light}%, ${alpha})`;
-      ctx.lineWidth = 1 + near * 1.1;
-      ctx.stroke();
-
-      if (near > 0.15) {
-        ctx.fillStyle = `hsla(${hue}, ${sat}%, ${light + 6}%, ${near * 0.07})`;
-        ctx.fill();
-      }
-    }
-
-    rafId = requestAnimationFrame(draw);
-  }
-
-  window.addEventListener('resize', resize);
-  window.addEventListener('mousemove', (e) => {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
-  });
-  window.addEventListener('mouseleave', () => {
-    mouse.x = -9999;
-    mouse.y = -9999;
-  });
-  window.addEventListener('touchmove', (e) => {
-    const p = e.touches[0];
-    if (!p) return;
-    mouse.x = p.clientX;
-    mouse.y = p.clientY;
-  }, { passive: true });
-  window.addEventListener('touchend', () => {
-    mouse.x = -9999;
-    mouse.y = -9999;
-  });
-
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-      cancelAnimationFrame(rafId);
-    } else {
-      rafId = requestAnimationFrame(draw);
-    }
-  });
-
-  resize();
-  draw();
-})();
-
-/* ===== Счётчики ===== */
-(function () {
-  const nums = document.querySelectorAll('.stat-num');
-  if (!nums.length) return;
-
-  const animate = (el) => {
-    const target = +el.dataset.count;
-    const suffix = el.dataset.suffix || '';
-    const dur = 1500;
-    const start = performance.now();
-
-    const step = (now) => {
-      const p = Math.min((now - start) / dur, 1);
-      const eased = 1 - Math.pow(1 - p, 4);
-      el.textContent = Math.floor(eased * target).toLocaleString('ru-RU') + suffix;
-      if (p < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  };
-
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
-      if (e.isIntersecting) {
-        animate(e.target);
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.4 });
-
-  nums.forEach((n) => io.observe(n));
-})();
-
-/* ===== Подсветка плейсхолдеров ===== */
-document.querySelectorAll('.img').forEach(el => {
-  el.addEventListener('mousemove', e => {
-    const r = el.getBoundingClientRect();
-    el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-    el.style.setProperty('--my', (e.clientY - r.top) + 'px');
-  });
-});
-</script>
-
+<script src="js/goals.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/hexbg.js" defer></script>
 </body>
 </html>
