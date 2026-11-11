@@ -1,370 +1,436 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ремонт дизеля в Минске | СТО Дизель-Сервис на Липковской</title>
-    <meta name="description" content="Профессиональный ремонт дизельных двигателей, форсунок Bosch и топливных систем в Минске. Быстрая диагностика, опытные мастера. Звоните!">
-    <style>
-        :root {
-            --bg-dark: #121214;
-            --bg-card: #1a1a1e;
-            --accent: #ffcc00;
-            --text-main: #ffffff;
-            --text-muted: #a0a0a5;
-            --border: #2a2a30;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            line-height: 1.5;
-            padding-bottom: 80px; /* Отступ для фиксированной мобильной кнопки */
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* HEADER */
-        header {
-            background-color: rgba(18, 18, 20, 0.95);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid var(--border);
-            backdrop-filter: blur(10px);
-        }
-
-        .header-wrap {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-
-        .logo {
-            font-size: 22px;
-            font-weight: 800;
-            letter-spacing: 1px;
-        }
-
-        .logo span {
-            color: var(--accent);
-        }
-
-        .header-info {
-            display: flex;
-            gap: 30px;
-            font-size: 14px;
-        }
-
-        .info-block span {
-            display: block;
-            color: var(--text-muted);
-            font-size: 12px;
-        }
-
-        /* HERO SECTION */
-        .hero {
-            position: relative;
-            padding: 100px 0;
-            background: linear-gradient(rgba(18, 18, 20, 0.85), rgba(18, 18, 20, 0.95)), 
-                        url('placeholder-hero.jpg') center/cover no-repeat; /* Сюда новое крутое фото ремзоны */
-            border-bottom: 1px solid var(--border);
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 42px;
-            font-weight: 800;
-            margin-bottom: 15px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero h1 span {
-            color: var(--accent);
-        }
-
-        .hero p {
-            color: var(--text-muted);
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        .main-phones {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .phone-btn {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border);
-            color: var(--text-main);
-            padding: 15px 30px;
-            font-size: 18px;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 8px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.2s ease;
-        }
-
-        .phone-btn:hover {
-            border-color: var(--accent);
-            background-color: #222226;
-        }
-
-        .phone-btn.primary {
-            background-color: var(--accent);
-            color: #000000;
-            border: none;
-        }
-
-        .phone-btn.primary:hover {
-            background-color: #e6b800;
-        }
-
-        /* SERVICES GRID */
-        .services {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            font-size: 28px;
-            font-weight: 800;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .section-title span {
-            color: var(--accent);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-        }
-
-        .card {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.2s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card-img {
-            height: 180px;
-            background-color: #25252b;
-            position: relative;
-            background-size: cover;
-            background-position: center;
-            /* Сюда через инлайн-стили вставишь новые эргономичные фото под каждую услугу */
-        }
-
-        .card-content {
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .card h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            color: var(--text-muted);
-            font-size: 14px;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-
-        .card-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid var(--border);
-            padding-top: 15px;
-            margin-top: auto;
-        }
-
-        .master-name {
-            font-size: 13px;
-            color: var(--text-muted);
-        }
-
-        .master-name strong {
-            display: block;
-            color: var(--text-main);
-        }
-
-        .card-call {
-            background-color: transparent;
-            border: 1px solid var(--accent);
-            color: var(--accent);
-            padding: 8px 16px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 14px;
-            transition: all 0.2s ease;
-        }
-
-        .card-call:hover {
-            background-color: var(--accent);
-            color: #000;
-        }
-
-        /* BRANDS */
-        .brands {
-            padding: 40px 0;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-            background-color: #16161a;
-        }
-
-        .brands-wrap {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            opacity: 0.6;
-        }
-
-        .brands-wrap span {
-            font-size: 18px;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        /* CONTACTS & MAP */
-        .contacts {
-            padding: 80px 0;
-        }
-
-        .contacts-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: start;
-        }
-
-        .contact-info-block {
-            margin-bottom: 25px;
-        }
-
-        .contact-info-block h4 {
-            color: var(--text-muted);
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-
-        .contact-info-block p, .contact-info-block a {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--text-main);
-            text-decoration: none;
-        }
-
-        .map-container {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            height: 300px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        /* FIXED BOTTOM BUTTON FOR MOBILE */
-        .fixed-bottom-btn {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: var(--accent);
-            color: #000000;
-            text-align: center;
-            padding: 18px;
-            font-size: 18px;
-            font-weight: 800;
-            text-decoration: none;
-            z-index: 999;
-            box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .header-info { display: none; }
-            .hero h1 { font-size: 32px; }
-            .hero p { font-size: 16px; }
-            .contacts-grid { grid-template-columns: 1fr; gap: 30px; }
-            .fixed-bottom-btn { display: block; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DieselCars — ремонт дизельных топливных систем в Минске</title>
+<meta name="description" content="Ремонт и диагностика дизельных топливных систем в Минске. Bosch, Lucas, Common Rail. 8 подъёмников, электрик в штате, парковка. Работаем с 2000 года.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+  <!-- Микроразметка Schema.org (LocalBusiness / AutoRepair) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "DieselCars",
+    "alternateName": "Дизель Карс",
+    "url": "https://dieselcars.by",
+    "logo": "https://dieselcars.by/logo.png",
+    "image": "https://dieselcars.by/logo.png",
+    "description": "Ремонт и диагностика дизельных топливных систем в Минске. Bosch, Lucas, Common Rail.",
+    "telephone": "+375296194092",
+    "priceRange": "BYN",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ул. Липковская, 6",
+      "addressLocality": "Минск",
+      "postalCode": "220000",
+      "addressCountry": "BY"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "53.9167638",
+      "longitude": "27.6856693"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.google.com/maps/place/СТО+Дизель-Сервис/@53.9167638,27.6856693"
+    ]
+  }
+  </script>
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="container header-wrap">
-            <div class="logo">DIESEL<span>SERVICE</span></div>
-            <div class="header-info">
-                <div class="info-block"><span>Адрес:</span>г. Минск, ул. Липковская, 6</div>
-                <div class="info-block"><span>Время работы:</span>ПН-ПТ: 9.00 - 18.00</div>
-            </div>
-        </div>
-    </header>
+<!-- ФОН: живые шестиугольники -->
+<canvas id="hexbg" aria-hidden="true"></canvas>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="container">
-            <h1>Ремонт дизельных двигателей и топливных систем в <span>Минске</span></h1>
-            <p>Профессиональное СТО на Липковской. Быстрая диагностика и устранение неполадок.</p>
-            <div class="main-phones">
-                <a href="tel:+375291755872" class="phone-btn primary">+375 (29) 175-58-72</a>
-                <a href="tel:+375173850034" class="phone-btn">+375 (17) 385-00-34</a>
-            </div>
-        </div>
-    </section>
+<!-- ===== ШАПКА ===== -->
+<header>
+  <div class="wrap header-inner">
 
-    <!-- BRANDS -->
-    <section class="brands">
-        <div class="container brands-wrap">
-            <span>BOSCH</span>
-            <span>COMMON RAIL</span>
-            <span>DELPHI</span>
-            <span>DENSO</span>
-            <span>SIEMENS</span>
-        </div>
-    </section>
+    <!-- ЛОГО -->
+    <a href="#" class="logo-wrap" aria-label="DieselCars — на главную">
+      <!-- МЕСТО ДЛЯ ЛОГОТИПА: вставьте <img src="logo.svg" alt="DieselCars"> -->
+      <span class="logo">Diesel<span>Cars</span></span>
+    </a>
 
+    <!-- ИНФО: адрес + график -->
+    <div class="header-info">
+      <span class="header-addr">Минск, ул. Липковская, 6</span>
+      <span class="header-hours">Пн–Пт: 9:00–18:00</span>
+    </div>
+
+    <!-- ТЕЛЕФОН -->
+    <a href="tel:+375296194092" class="phone">+375 (29) 619-40-92</a>
+
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Minsk · Lipkovskaya 6 · с 2000 года</p>
+      <h1>Ремонт Дизельных<br>Топливынх Систем</h1>
+      <p class="lead">Диагностика, ремонт и обслуживание дизельных легковых автомобилей и микроавтобусов. Топливная аппаратура Bosch, Lucas, Common Rail.</p>
+      <div class="hero-cta">
+        <a href="tel:+375296194092" class="btn">Позвонить</a>
+        <a href="#prices" class="btn btn-ghost">Смотреть цены</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ИНФОГРАФИКА ===== -->
+  <section class="stats">
+    <div class="wrap stats-grid">
+
+      <div class="stat">
+        <span class="stat-num" data-count="25" data-suffix="+">0</span>
+        <span class="stat-label">лет на рынке</span>
+        <span class="stat-sub">работаем с 2000 года</span>
+      </div>
+
+      <div class="stat">
+        <span class="stat-num" data-count="8" data-suffix="">0</span>
+        <span class="stat-label">подъёмников</span>
+        <span class="stat-sub">без очереди на бокс</span>
+      </div>
+
+      <div class="stat">
+        <span class="stat-num" data-count="1200" data-suffix="+">0</span>
+        <span class="stat-label">форсунок в год</span>
+        <span class="stat-sub">проходят стенд</span>
+      </div>
+
+      <div class="stat">
+        <span class="stat-num" data-count="100" data-suffix="%">0</span>
+        <span class="stat-label">точность диагностики</span>
+        <span class="stat-sub">на оригинальном стенде</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== ЧТО ЕЩЁ МОЖЕМ ===== -->
+  <section class="wrap section">
+    <h2>что ещё</h2>
+
+    <div class="features">
+
+      <article class="feature">
+        <span class="feature-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </span>
+        <h3>Парковка на территории</h3>
+        <p>Оставляете авто у нашего сервиса, парковка закрытая и под охраной</p>
+      </article>
+
+      <article class="feature">
+        <span class="feature-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </span>
+        <h3>Электрик в штате</h3>
+        <p>Электрика — рядом с механикой. Не надо гонять машину по городу между сервисами.</p>
+      </article>
+
+      <article class="feature">
+        <span class="feature-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </span>
+        <h3>Быстрая диагностика</h3>
+        <p>Считаем ошибки и проверим топливную за один визит — без записи на неделю вперёд.</p>
+      </article>
+
+      <article class="feature">
+        <span class="feature-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"/><path d="M8.5 14.5L7 22l5-3 5 3-1.5-7.5"/></svg>
+        </span>
+        <h3>Сертификаты</h3>
+        <p>Подтверждённая квалификация и допуски — можно посмотреть и проверить.</p>
+        <a href="/certificate" class="feature-link">Смотреть сертификаты →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== ПЕРЕЧЕНЬ РАБОТ ===== -->
+  <section class="wrap section">
+    <h2>Перечень работ</h2>
+    <ul class="services">
+      <li>Диагностика топливной системы и двигателя</li>
+      <li>Ремонт ТНВД и форсунок Common Rail</li>
+      <li>Ремонт насос-форсунок</li>
+      <li>Ультразвуковая чистка распылителей</li>
+      <li>Замена распылителей и уплотнений</li>
+      <li>Правка посадочных гнёзд</li>
+      <li>Регулировка и кодирование форсунок</li>
+      <li>Замена двигателя целиком — с обвязкой и электрикой</li>
+    </ul>
+  </section>
+
+  <div class="wrap">
+    <div class="img">[ФОТО — цех / оборудование / крупный план форсунки]</div>
+  </div>
+
+  <!-- ===== СИСТЕМЫ ===== -->
+  <section class="wrap section">
+    <h2>Системы</h2>
+    <div class="brands">
+      <span>Bosch</span>
+      <span>Lucas</span>
+      <span>Common Rail</span>
+      <span>Siemens</span>
+      <span>Delphi</span>
+      <span>Denso</span>
+    </div>
+  </section>
+
+  <!-- ===== ЦЕНЫ ===== -->
+  <section class="wrap section" id="prices">
+    <h2>Цены</h2>
+    <p>Точная стоимость — после диагностики. Ниже ориентиры по основным работам.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>№</th><th>Работа</th><th>Цена</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>01</td><td>Диагностика топливной системы</td><td>от 25 р.</td></tr>
+          <tr><td>02</td><td>Снятие / установка форсунки (1 цил.)</td><td>от 10 р.</td></tr>
+          <tr><td>03</td><td>Проверка форсунки на стенде</td><td>от 10 р.</td></tr>
+          <tr><td>04</td><td>Ремонт форсунки Common Rail</td><td>от 45 р.</td></tr>
+          <tr><td>05</td><td>Снятие / установка ТНВД (легковой)</td><td>от 110 р.</td></tr>
+          <tr><td>06</td><td>Ремонт ТНВД Common Rail</td><td>от 120 р.</td></tr>
+          <tr><td>07</td><td>Ультразвуковая чистка распылителей</td><td>от 9 р.</td></tr>
+          <tr><td>08</td><td>Замена распылителя</td><td>от 18 р.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+    <!-- ===== ПЛАШКА: ПОЛНЫЙ ПРАЙС ===== -->
+  <section class="wrap">
+    <a href="price.html" class="price-banner">
+      <div class="price-banner__text">
+        <span class="price-banner__eyebrow">Полный прайс-лист</span>
+        <h3 class="price-banner__title">Все работы и цены — на отдельной странице</h3>
+        <p class="price-banner__sub">Диагностика, ремонт ТНВД, форсунки, насос-форсунки, замена двигателя — с ценами и сроками.</p>
+      </div>
+      <span class="price-banner__arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </span>
+    </a>
+  </section>
+
+  <!-- ===== КОНТАКТЫ ===== -->
+  <section class="wrap section">
+    <h2>Контакты</h2>
+    <p>
+      Минск, ул. Липковская, 6<br>
+      Пн–Пт: 9:00–18:00<br>
+      +375 (29) 619-40-92
+    </p>
+    
+    <!-- Блок с картой -->
+    <div class="img map">
+      <iframe 
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A444822249ce218606a26cbd649e1cc3ddb65e5cfa3f42db873479c99d7f280b8&amp;source=constructor" 
+        width="100%" 
+        height="100%" 
+        frameborder="0"
+        title="Карта проезда к СТО Дизель Карс"
+        loading="lazy"
+        style="border:0; position:absolute; inset:0; width:100%; height:100%;">
+      </iframe>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <span>© DieselCars · с 2000 года</span>
+  <span>Минск, Липковская, 6</span>
+</footer>
+
+<script>
+/* ===== ФОН: живые шестиугольники (тёплая палитра) ===== */
+(function () {
+  const c = document.getElementById('hexbg');
+  if (!c) return;
+  const ctx = c.getContext('2d');
+  const DPR = Math.min(window.devicePixelRatio || 1, 2);
+
+  let W = 0, H = 0;
+  let hexes = [];
+  let mouse = { x: -9999, y: -9999 };
+  let t = 0;
+  let rafId = null;
+
+  const R = 34;
+  const HSTEP = R * 1.5;
+  const VSTEP = R * Math.sqrt(3);
+
+  function resize() {
+    W = window.innerWidth;
+    H = window.innerHeight;
+    c.width = W * DPR;
+    c.height = H * DPR;
+    c.style.width = W + 'px';
+    c.style.height = H + 'px';
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    build();
+  }
+
+  function build() {
+    hexes = [];
+    const cols = Math.ceil(W / HSTEP) + 2;
+    const rows = Math.ceil(H / VSTEP) + 2;
+    for (let row = 0; row < rows; row++) {
+      for (let col = 0; col < cols; col++) {
+        const x = col * HSTEP;
+        const y = row * VSTEP + (col % 2 ? VSTEP / 2 : 0);
+        hexes.push({
+          x, y,
+          phase: Math.random() * Math.PI * 2,
+          speed: 0.3 + Math.random() * 0.5,
+        });
+      }
+    }
+  }
+
+  function hexPath(x, y, r) {
+    ctx.beginPath();
+    for (let i = 0; i < 6; i++) {
+      const a = (Math.PI / 3) * i - Math.PI / 6;
+      const px = x + r * Math.cos(a);
+      const py = y + r * Math.sin(a);
+      i === 0 ? ctx.moveTo(px, py) : ctx.lineTo(px, py);
+    }
+    ctx.closePath();
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    t += 0.005;
+
+    for (const h of hexes) {
+      const dist = Math.hypot(h.x - mouse.x, h.y - mouse.y);
+      const near = Math.max(0, 1 - dist / 280);
+
+      const breath = 0.5 + 0.18 * Math.sin(t * h.speed + h.phase);
+
+      /* ТЁПЛАЯ ПАЛИТРА: коричневый -> оранжевый -> янтарь */
+      const mix = near * 0.75 + breath * 0.25;
+
+      const hue   = 22 + mix * 16;   // 22 → 38
+      const sat   = 50 + mix * 50;   // 50% → 100%
+      const light = 30 + mix * 42;   // 30% → 72%
+
+      const alpha = 0.08 + near * 0.30 + breath * 0.05;
+
+      hexPath(h.x, h.y, R * 0.94);
+      ctx.strokeStyle = `hsla(${hue}, ${sat}%, ${light}%, ${alpha})`;
+      ctx.lineWidth = 1 + near * 1.1;
+      ctx.stroke();
+
+      if (near > 0.15) {
+        ctx.fillStyle = `hsla(${hue}, ${sat}%, ${light + 6}%, ${near * 0.07})`;
+        ctx.fill();
+      }
+    }
+
+    rafId = requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', resize);
+  window.addEventListener('mousemove', (e) => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+  window.addEventListener('mouseleave', () => {
+    mouse.x = -9999;
+    mouse.y = -9999;
+  });
+  window.addEventListener('touchmove', (e) => {
+    const p = e.touches[0];
+    if (!p) return;
+    mouse.x = p.clientX;
+    mouse.y = p.clientY;
+  }, { passive: true });
+  window.addEventListener('touchend', () => {
+    mouse.x = -9999;
+    mouse.y = -9999;
+  });
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      cancelAnimationFrame(rafId);
+    } else {
+      rafId = requestAnimationFrame(draw);
+    }
+  });
+
+  resize();
+  draw();
+})();
+
+/* ===== Счётчики ===== */
+(function () {
+  const nums = document.querySelectorAll('.stat-num');
+  if (!nums.length) return;
+
+  const animate = (el) => {
+    const target = +el.dataset.count;
+    const suffix = el.dataset.suffix || '';
+    const dur = 1500;
+    const start = performance.now();
+
+    const step = (now) => {
+      const p = Math.min((now - start) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 4);
+      el.textContent = Math.floor(eased * target).toLocaleString('ru-RU') + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        animate(e.target);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  nums.forEach((n) => io.observe(n));
+})();
+
+/* ===== Подсветка плейсхолдеров ===== */
+document.querySelectorAll('.img').forEach(el => {
+  el.addEventListener('mousemove', e => {
+    const r = el.getBoundingClientRect();
+    el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+    el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+  });
+});
+</script>
+
+</body>
+</html>

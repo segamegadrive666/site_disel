@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Прайс-лист — ООО «Дизель Карс»</title>
+<meta name="description" content="Официальный прайс-лист ООО «Дизель Карс»: диагностика, ремонт ТНВД, форсунок Common Rail, насос-форсунок, замена двигателя.">
+<style>
+/* ============================================================
+   СТРАНИЦА ПРАЙСА — строгое ч/б оформление (по ГОСТ Р 7.0.97-2016)
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: #e8e8e8; /* серый фон «стола» вокруг листа */
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14pt;
+  line-height: 1.45;
+  color: #000;
+  background: #fff;
+  max-width: 210mm;       /* A4 по ширине */
+  margin: 0 auto;
+  padding: 20mm 15mm 20mm 30mm; /* левое поле 30мм под подшивку, по ГОСТ */
+  min-height: 100vh;
+}
+
+/* ===== ШАПКА ДОКУМЕНТА ===== */
+.doc-header {
+  border-bottom: 2px solid #000;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
+
+.doc-org {
+  font-size: 16pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.doc-org-sub {
+  font-size: 11pt;
+  line-height: 1.4;
+}
+
+.doc-org-sub span {
+  display: block;
+}
+
+.doc-meta {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  font-size: 11pt;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #000;
+}
+
+.doc-meta span {
+  white-space: nowrap;
+}
+
+/* ===== ЗАГОЛОВОК ===== */
+.doc-title {
+  text-align: center;
+  margin: 28px 0 8px;
+}
+
+.doc-title h1 {
+  font-size: 18pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 6px;
+}
+
+.doc-title .doc-subtitle {
+  font-size: 12pt;
+  font-style: italic;
+}
+
+/* ===== ВВОДНЫЙ ТЕКСТ ===== */
+.doc-intro {
+  font-size: 12pt;
+  text-align: justify;
+  margin: 20px 0;
+  padding: 12px 16px;
+  border: 1px solid #000;
+}
+
+/* ===== РАЗДЕЛЫ ===== */
+.section {
+  margin: 28px 0;
+}
+
+.section h2 {
+  font-size: 14pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #000;
+}
+
+/* ===== ТАБЛИЦЫ ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11.5pt;
+  margin-bottom: 8px;
+}
+
+thead th {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  text-align: left;
+  padding: 8px 10px;
+  border: 1px solid #000;
+  font-size: 11pt;
+}
+
+thead th:first-child {
+  width: 50px;
+  text-align: center;
+}
+
+thead th:last-child {
+  text-align: right;
+  width: 130px;
+}
+
+tbody td {
+  padding: 7px 10px;
+  border: 1px solid #000;
+  vertical-align: top;
+}
+
+tbody td:first-child {
+  text-align: center;
+  width: 50px;
+}
+
+tbody td:last-child {
+  text-align: right;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+/* ===== ВАЖНЫЕ ПРИМЕЧАНИЯ ===== */
+.notice {
+  border: 2px solid #000;
+  padding: 16px 20px;
+  margin: 28px 0;
+  font-size: 12pt;
+}
+
+.notice h3 {
+  font-size: 12pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #000;
+}
+
+.notice ol {
+  padding-left: 22px;
+}
+
+.notice ol li {
+  margin-bottom: 8px;
+  text-align: justify;
+}
+
+.notice ol li:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== ПОДПИСИ ===== */
+.signs {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid #000;
+  font-size: 11.5pt;
+}
+
+.signs .sign {
+  flex: 1;
+}
+
+.signs .sign-line {
+  display: inline-block;
+  border-bottom: 1px solid #000;
+  min-width: 180px;
+  margin: 0 4px;
+}
+
+.signs .sign-caption {
+  font-size: 10pt;
+  color: #333;
+  margin-top: 2px;
+}
+
+/* ===== КОЛОНТИТУЛ ===== */
+.doc-footer {
+  margin-top: 36px;
+  padding-top: 12px;
+  border-top: 1px solid #000;
+  font-size: 10pt;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* ===== ПЕЧАТЬ ===== */
+@media print {
+  html { background: #fff; }
+  body { padding: 15mm 10mm 15mm 20mm; max-width: none; }
+  thead th { background: #000 !important; color: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .section { page-break-inside: avoid; }
+  .notice { page-break-inside: avoid; }
+}
+
+/* ===== МОБИЛЬНЫЙ ===== */
+@media (max-width: 640px) {
+  body {
+    font-size: 12pt;
+    padding: 16px 12px;
+    max-width: none;
+  }
+
+  .doc-org { font-size: 14pt; }
+  .doc-title h1 { font-size: 14pt; letter-spacing: 0.8px; }
+  .doc-meta { flex-direction: column; gap: 4px; font-size: 10pt; }
+  .doc-meta span { white-space: normal; }
+
+  table { font-size: 10.5pt; }
+  thead th, tbody td { padding: 6px 8px; }
+  thead th:last-child { width: 90px; }
+
+  .signs { flex-direction: column; gap: 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== ШАПКА ДОКУМЕНТА ===== -->
+<div class="doc-header">
+
+  <div class="doc-org">ООО «Дизель Карс»</div>
+
+  <div class="doc-org-sub">
+    <span>УНП 191234567</span>
+    <span>220000, Республика Беларусь, г. Минск, ул. Липковская, 6</span>
+    <span>Тел.: +375 (29) 619-40-92 · E-mail: info@dieselcars.by</span>
+  </div>
+
+  <div class="doc-meta">
+    <span>Исх. № ____ от «____» __________ 20___ г.</span>
+    <span>Действует с: «____» __________ 20___ г.</span>
+  </div>
+
+</div>
+
+<!-- ===== ЗАГОЛОВОК ===== -->
+<div class="doc-title">
+  <h1>Прайс-лист</h1>
+  <div class="doc-subtitle">на услуги по ремонту и диагностике дизельных топливных систем</div>
+</div>
+
+<!-- ===== ВВОДНЫЙ ТЕКСТ ===== -->
+<div class="doc-intro">
+  Настоящий прайс-лист устанавливает ориентировочную стоимость работ по техническому
+  обслуживанию и ремонту дизельных топливных систем, выполняемых ООО «Дизель Карс».
+  Окончательная стоимость определяется после проведения диагностики и составления
+  дефектной ведомости.
+</div>
+
+<!-- ===== РАЗДЕЛ 1 ===== -->
+<section class="section">
+  <h2>1. Диагностика и общие работы</h2>
+  <table>
+    <thead>
+      <tr><th>№</th><th>Наименование работ</th><th>Цена, BYN</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1.1</td><td>Диагностика систем управления двигателем</td><td>от 25,00</td></tr>
+      <tr><td>1.2</td><td>Считывание ошибок блока управления</td><td>от 11,00</td></tr>
+      <tr><td>1.3</td><td>Осмотр автомобиля</td><td>от 9,00</td></tr>
+      <tr><td>1.4</td><td>Поиск неисправности</td><td>от 18,00</td></tr>
+      <tr><td>1.5</td><td>Проверка компрессии одного цилиндра</td><td>от 8,00</td></tr>
+      <tr><td>1.6</td><td>Проверка меток ГРМ</td><td>от 25,00</td></tr>
+      <tr><td>1.7</td><td>Проверка УОВ</td><td>от 10,00</td></tr>
+      <tr><td>1.8</td><td>Регулировка УОВ (легковой автомобиль)</td><td>от 37,00</td></tr>
+      <tr><td>1.9</td><td>Регулировка УОВ (микроавтобус)</td><td>от 48,00</td></tr>
+      <tr><td>1.10</td><td>Регулировка фаз ГРМ</td><td>от 23,00</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===== РАЗДЕЛ 2 ===== -->
+<section class="section">
+  <h2>2. Ремонт форсунок Common Rail</h2>
+  <table>
+    <thead>
+      <tr><th>№</th><th>Наименование работ</th><th>Цена, BYN</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>2.1</td><td>Проверка гидроплотности топливной системы</td><td>от 13,00</td></tr>
+      <tr><td>2.2</td><td>Диагностика форсунки CR Delphi</td><td>от 10,00</td></tr>
+      <tr><td>2.3</td><td>Проверка форсунки CR с распечаткой</td><td>от 7,50</td></tr>
+      <tr><td>2.4</td><td>Проверка грузовой форсунки CR</td><td>от 10,00</td></tr>
+      <tr><td>2.5</td><td>Ремонт форсунки Common Rail</td><td>от 45,00</td></tr>
+      <tr><td>2.6</td><td>Регулировка форсунки CR</td><td>от 20,00</td></tr>
+      <tr><td>2.7</td><td>Регулировка форсунки CR Bosch</td><td>от 25,00</td></tr>
+      <tr><td>2.8</td><td>Замена распылителя без ремонта форсунки CR</td><td>от 18,00</td></tr>
+      <tr><td>2.9</td><td>Ремонт седла клапана (мультипликатора) CR</td><td>от 18,00</td></tr>
+      <tr><td>2.10</td><td>Раскоксовка гнезда форсунки (1 цилиндр)</td><td>от 40,00</td></tr>
+      <tr><td>2.11</td><td>Правка посадочного гнезда форсунки CR</td><td>от 15,00</td></tr>
+      <tr><td>2.12</td><td>Снятие / установка форсунки CR, 1 цил. (легковой)</td><td>от 10,00</td></tr>
+      <tr><td>2.13</td><td>Снятие / установка форсунки CR, 1 цил. (микроавтобус, внедорожник)</td><td>от 15,00</td></tr>
+      <tr><td>2.14</td><td>Замена датчика системы CR Bosch, Denso</td><td>от 15,00</td></tr>
+      <tr><td>2.15</td><td>Замена штуцера CR</td><td>от 5,00</td></tr>
+      <tr><td>2.16</td><td>Замена уплотнений на контуре низкого давления</td><td>от 27,00</td></tr>
+      <tr><td>2.17</td><td>Замена ТПУ (топливоподкачивающего устройства)</td><td>от 31,00</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===== РАЗДЕЛ 3 ===== -->
+<section class="section">
+  <h2>3. Ремонт ТНВД</h2>
+  <table>
+    <thead>
+      <tr><th>№</th><th>Наименование работ</th><th>Цена, BYN</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>3.1</td><td>Снятие / установка ТНВД (легковой автомобиль)</td><td>от 110,00</td></tr>
+      <tr><td>3.2</td><td>Снятие / установка ТНВД (микроавтобус, внедорожник)</td><td>от 150,00</td></tr>
+      <tr><td>3.3</td><td>Проверка ТНВД CR</td><td>от 30,00</td></tr>
+      <tr><td>3.4</td><td>Дефектовка ТНВД CR</td><td>от 25,00</td></tr>
+      <tr><td>3.5</td><td>Ремонт ТНВД CR (CP3, CP1, HP3)</td><td>от 120,00</td></tr>
+      <tr><td>3.6</td><td>Ремонт ТНВД CR (Delphi, Denso HP2)</td><td>от 150,00</td></tr>
+      <tr><td>3.7</td><td>Замена сальника ТНВД (без разборки)</td><td>от 5,00</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===== РАЗДЕЛ 4 ===== -->
+<section class="section">
+  <h2>4. Ремонт насос-форсунок</h2>
+  <table>
+    <thead>
+      <tr><th>№</th><th>Наименование работ</th><th>Цена, BYN</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>4.1</td><td>Снятие / установка насос-форсунки (1 цилиндр)</td><td>от 75,00</td></tr>
+      <tr><td>4.2</td><td>Снятие / установка комплекта насос-форсунок (4 шт.)</td><td>от 125,00</td></tr>
+      <tr><td>4.3</td><td>Снятие / установка комплекта (VW Touareg 2,5)</td><td>от 160,00</td></tr>
+      <tr><td>4.4</td><td>Регулировка начала подачи топлива</td><td>от 38,00</td></tr>
+      <tr><td>4.5</td><td>Замена установочного ремкомплекта (1 шт.)</td><td>от 2,00</td></tr>
+      <tr><td>4.6</td><td>Правка посадочного гнезда насос-форсунки</td><td>от 26,00</td></tr>
+      <tr><td>4.7</td><td>Замена регулировочных винтов с последующей регулировкой</td><td>от 10,00</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===== РАЗДЕЛ 5 ===== -->
+<section class="section">
+  <h2>5. Ультразвуковая чистка</h2>
+  <table>
+    <thead>
+      <tr><th>№</th><th>Наименование работ</th><th>Цена, BYN</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>5.1</td><td>Ультразвуковая мойка деталей (один сеанс)</td><td>от 8,00</td></tr>
+      <tr><td>5.2</td><td>Ультразвуковая чистка распылителей (2 шт.)</td><td>от 9,00</td></tr>
+      <tr><td>5.3</td><td>Чистка регулятора давления</td><td>от 9,50</td></tr>
+      <tr><td>5.4</td><td>Чистка топливной системы</td><td>от 40,00</td></tr>
+      <tr><td>5.5</td><td>Снятие / установка и чистка клапана EGR</td><td>от 55,00</td></tr>
+      <tr><td>5.6</td><td>Чистка ЭТПУ</td><td>от 15,00</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===== РАЗДЕЛ 6 ===== -->
+<section class="section">
+  <h2>6. Замена двигателя и прочие работы</h2>
+  <table>
+    <thead>
+      <tr><th>№</th><th>Наименование работ</th><th>Цена, BYN</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>6.1</td><td>Замена двигателя целиком — с обвязкой и электрикой</td><td>по запросу</td></tr>
+      <tr><td>6.2</td><td>Снятие / установка клапанной крышки (Audi, VW)</td><td>от 13,00</td></tr>
+      <tr><td>6.3</td><td>Снятие / установка впускного коллектора (BMW, Rover)</td><td>от 55,00</td></tr>
+      <tr><td>6.4</td><td>Снятие / установка впускного коллектора (Mercedes)</td><td>от 30,00</td></tr>
+      <tr><td>6.5</td><td>Снятие / установка дозировочного блока</td><td>от 14,00</td></tr>
+      <tr><td>6.6</td><td>Снятие / установка тандемного насоса (Audi, VW)</td><td>от 40,00</td></tr>
+      <tr><td>6.7</td><td>Замена топливного фильтра</td><td>от 15,00</td></tr>
+      <tr><td>6.8</td><td>Снятие / установка топливного фильтра</td><td>от 11,00</td></tr>
+      <tr><td>6.9</td><td>Снятие / установка топливного бака</td><td>от 72,00</td></tr>
+      <tr><td>6.10</td><td>Снятие / установка рейла и трубопровода</td><td>от 21,00</td></tr>
+      <tr><td>6.11</td><td>Замена свечи накала</td><td>от 18,00</td></tr>
+      <tr><td>6.12</td><td>Проверка свечей накала одного цилиндра</td><td>от 3,50</td></tr>
+      <tr><td>6.13</td><td>Прописка кода одного цилиндра</td><td>от 5,00</td></tr>
+      <tr><td>6.14</td><td>Замена датчика коленчатого вала</td><td>от 33,00</td></tr>
+      <tr><td>6.15</td><td>Замена датчика распределительного вала</td><td>от 11,00</td></tr>
+      <tr><td>6.16</td><td>Замена датчика массового расхода воздуха</td><td>от 11,00</td></tr>
+      <tr><td>6.17</td><td>Снятие / установка / замена ЭТПУ</td><td>от 54,00</td></tr>
+      <tr><td>6.18</td><td>Запуск автомобиля (запустить двигатель)</td><td>от 10,00</td></tr>
+      <tr><td>6.19</td><td>Слесарные работы</td><td>от 32,00</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===== ВАЖНОЕ ПРИМЕЧАНИЕ О КОРРЕКТИРОВКЕ ЦЕН ===== -->
+<div class="notice">
+  <h3>Порядок формирования и корректировки цен</h3>
+  <ol>
+    <li>
+      Указанные в настоящем прайс-листе цены являются <strong>ориентировочными</strong>
+      и не являются публичной офертой в соответствии со ст. 405 Гражданского кодекса
+      Республики Беларусь.
+    </li>
+    <li>
+      Окончательная стоимость работ определяется <strong>после проведения диагностики</strong>
+      и согласования дефектной ведомости с заказчиком. До начала работ заказчик
+      уведомляется о фактической стоимости в письменной или устной форме.
+    </li>
+    <li>
+      Цены могут быть <strong>скорректированы</strong> в следующих случаях:
+      <ul style="margin: 6px 0 0 22px; list-style: disc;">
+        <li>изменение стоимости запасных частей и расходных материалов у поставщика;</li>
+        <li>изменение курса национальной валюты по отношению к иностранным валютам (для импортных запчастей);</li>
+        <li>изменение ставок налогов и сборов, установленных законодательством Республики Беларусь;</li>
+        <li>выявление скрытых дефектов и дополнительных объёмов работ, не предусмотренных первичной диагностикой;</li>
+        <li>изменение тарифов на энергоносители и коммунальные услуги;</li>
+        <li>инфляционные процессы, подтверждённые официальной статистикой Национального статистического комитета Республики Беларусь.</li>
+      </ul>
+    </li>
+    <li>
+      О любом изменении цен заказчик уведомляется <strong>до начала выполнения работ</strong>.
+      Работы, не согласованные с заказчиком по стоимости, не выполняются.
+    </li>
+    <li>
+      Стоимость работ по замене двигателя, капитальному ремонту ТНВД и иным сложным
+      видам ремонта определяется <strong>индивидуально</strong> по результатам дефектовки
+      и указывается в отдельном соглашении (смете).
+    </li>
+    <li>
+      Настоящий прайс-лист действует с момента утверждения и до момента замены его
+      новой редакцией. Предыдущие редакции утрачивают силу с даты утверждения новой.
+    </li>
+  </ol>
+</div>
+
+<!-- ===== ПОДПИСИ ===== -->
+<div class="signs">
+  <div class="sign">
+    <div>Директор ООО «Дизель Карс»</div>
+    <div style="margin-top: 24px;">
+      <span class="sign-line"></span> / <span class="sign-line" style="min-width: 120px;"></span>
+    </div>
+    <div class="sign-caption">подпись / расшифровка</div>
+  </div>
+  <div class="sign" style="text-align: right;">
+    <div>«____» __________ 20___ г.</div>
+    <div style="margin-top: 8px;">М.П.</div>
+  </div>
+</div>
+
+<!-- ===== КОЛОНТИТУЛ ===== -->
+<div class="doc-footer">
+  ООО «Дизель Карс» · УНП 191234567 · 220000, г. Минск, ул. Липковская, 6<br>
+  Тел.: +375 (29) 619-40-92 · E-mail: info@dieselcars.by<br>
+  Документ сформирован автоматически. Актуальная версия — на сайте dieselcars.by
+</div>
+
+</body>
+</html>
