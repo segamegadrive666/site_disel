@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ремонт дизеля в Минске | СТО Дизель-Сервис на Липковской</title>
+    <meta name="description" content="Профессиональный ремонт дизельных двигателей, форсунок Bosch и топливных систем в Минске. Быстрая диагностика, опытные мастера. Звоните!">
+    <style>
+        :root {
+            --bg-dark: #121214;
+            --bg-card: #1a1a1e;
+            --accent: #ffcc00;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a5;
+            --border: #2a2a30;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.5;
+            padding-bottom: 80px; /* Отступ для фиксированной мобильной кнопки */
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HEADER */
+        header {
+            background-color: rgba(18, 18, 20, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(10px);
+        }
+
+        .header-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .header-info {
+            display: flex;
+            gap: 30px;
+            font-size: 14px;
+        }
+
+        .info-block span {
+            display: block;
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            padding: 100px 0;
+            background: linear-gradient(rgba(18, 18, 20, 0.85), rgba(18, 18, 20, 0.95)), 
+                        url('placeholder-hero.jpg') center/cover no-repeat; /* Сюда новое крутое фото ремзоны */
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .main-phones {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .phone-btn {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .phone-btn:hover {
+            border-color: var(--accent);
+            background-color: #222226;
+        }
+
+        .phone-btn.primary {
+            background-color: var(--accent);
+            color: #000000;
+            border: none;
+        }
+
+        .phone-btn.primary:hover {
+            background-color: #e6b800;
+        }
+
+        /* SERVICES GRID */
+        .services {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title span {
+            color: var(--accent);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            height: 180px;
+            background-color: #25252b;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            /* Сюда через инлайн-стили вставишь новые эргономичные фото под каждую услугу */
+        }
+
+        .card-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border);
+            padding-top: 15px;
+            margin-top: auto;
+        }
+
+        .master-name {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .master-name strong {
+            display: block;
+            color: var(--text-main);
+        }
+
+        .card-call {
+            background-color: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+
+        .card-call:hover {
+            background-color: var(--accent);
+            color: #000;
+        }
+
+        /* BRANDS */
+        .brands {
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            background-color: #16161a;
+        }
+
+        .brands-wrap {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            opacity: 0.6;
+        }
+
+        .brands-wrap span {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        /* CONTACTS & MAP */
+        .contacts {
+            padding: 80px 0;
+        }
+
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .contact-info-block {
+            margin-bottom: 25px;
+        }
+
+        .contact-info-block h4 {
+            color: var(--text-muted);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .contact-info-block p, .contact-info-block a {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .map-container {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* FIXED BOTTOM BUTTON FOR MOBILE */
+        .fixed-bottom-btn {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--accent);
+            color: #000000;
+            text-align: center;
+            padding: 18px;
+            font-size: 18px;
+            font-weight: 800;
+            text-decoration: none;
+            z-index: 999;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .header-info { display: none; }
+            .hero h1 { font-size: 32px; }
+            .hero p { font-size: 16px; }
+            .contacts-grid { grid-template-columns: 1fr; gap: 30px; }
+            .fixed-bottom-btn { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container header-wrap">
+            <div class="logo">DIESEL<span>SERVICE</span></div>
+            <div class="header-info">
+                <div class="info-block"><span>Адрес:</span>г. Минск, ул. Липковская, 6</div>
+                <div class="info-block"><span>Время работы:</span>ПН-ПТ: 9.00 - 18.00</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <h1>Ремонт дизельных двигателей и топливных систем в <span>Минске</span></h1>
+            <p>Профессиональное СТО на Липковской. Быстрая диагностика и устранение неполадок.</p>
+            <div class="main-phones">
+                <a href="tel:+375291755872" class="phone-btn primary">+375 (29) 175-58-72</a>
+                <a href="tel:+375173850034" class="phone-btn">+375 (17) 385-00-34</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRANDS -->
+    <section class="brands">
+        <div class="container brands-wrap">
+            <span>BOSCH</span>
+            <span>COMMON RAIL</span>
+            <span>DELPHI</span>
+            <span>DENSO</span>
+            <span>SIEMENS</span>
+        </div>
+    </section>
+
